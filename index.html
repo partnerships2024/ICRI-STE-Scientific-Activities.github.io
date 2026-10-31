@@ -410,6 +410,125 @@ footer{margin-top:0}
   .band{padding:22px}
 }
 
+/* =========================================================
+   FINAL VISUAL REFINEMENT — cohesive spacing, navigation and portals
+   Keeps the existing page structure, links and validation logic.
+   ========================================================= */
+:root{
+  --max:1320px;
+  --paper:#f4f7fa;
+  --line:#e2eaf0;
+  --shadow:0 16px 42px rgba(7,31,53,.09);
+}
+body{background:#f4f7fa;color:#203647}
+.container{width:min(var(--max),calc(100% - 52px))}
+.utility{min-height:34px;font-size:11px;letter-spacing:.12px}
+.utility .container{gap:14px}
+.site-header{background:rgba(255,255,255,.97);box-shadow:0 7px 24px rgba(7,31,53,.07)}
+.header-main{min-height:82px;gap:18px}
+.brand{min-width:0;gap:12px}
+.brand img{width:150px;max-height:56px}
+.nav{gap:4px;margin-right:0}
+.nav>a,.nav-group>.nav-trigger{font-size:11px;padding:9px 9px;border-radius:9px}
+.nav .nav-cta{padding-inline:13px}
+.nav-dropdown{min-width:255px;border-radius:13px}
+section{padding:68px 0}
+.hero{padding:64px 0 70px}
+.hero-inner{gap:44px}
+.hero h1{letter-spacing:-1.1px;line-height:1.1}
+.hero p{max-width:650px}
+.hero-actions{gap:11px}
+.hero-visual{border-radius:24px;box-shadow:0 24px 55px rgba(7,31,53,.16)}
+.quick{padding:0 0 28px}
+.quick-grid{gap:14px}
+.quick a,.quick .quick-card{border:1px solid #e4ebf0;border-radius:15px;box-shadow:0 8px 24px rgba(7,31,53,.055);transition:transform .2s,box-shadow .2s}
+.quick a:hover,.quick .quick-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(7,31,53,.09)}
+.section-head{max-width:940px;margin-bottom:34px}
+.section-head h2{letter-spacing:-.65px;line-height:1.2}
+.section-head p{line-height:1.7}
+.cards{gap:18px}
+.card,.path-item,.ethics-card,.portal{
+  border:1px solid #e3ebf1;
+  border-radius:17px;
+  box-shadow:0 9px 28px rgba(7,31,53,.055);
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.card:hover,.path-item:hover,.ethics-card:hover,.portal:hover{
+  transform:translateY(-3px);
+  box-shadow:0 16px 34px rgba(7,31,53,.095);
+  border-color:#d3e0e9;
+}
+.card{padding:25px}
+.feature{border:1px solid #e2eaf0;border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+.feature-copy{padding:34px}
+.feature-img img{height:100%;object-fit:cover}
+.band{border-radius:22px;box-shadow:var(--shadow)}
+.band-grid{align-items:center}
+.path-item{background:#fff}
+#ecr .path{gap:14px}
+#ecr .path-item{padding:20px 15px}
+#commission-preview,#associated-companies,#research-portals,#research-ethics-benefits,#membership-validation,#certificate-validation{
+  scroll-margin-top:108px;
+  padding-top:66px;
+  padding-bottom:66px;
+}
+#access-services{padding-top:54px;padding-bottom:16px}
+#research-portals .portal{max-width:100%;padding:30px}
+#research-portals .cards{margin-top:22px}
+#research-portals .card{height:100%}
+.ethics-grid{gap:18px}
+.ethics-card{background:#fff}
+input,button,.btn{border-radius:10px}
+input{min-height:46px}
+button,.btn{transition:transform .18s,box-shadow .18s,background .18s}
+button:hover,.btn:hover{transform:translateY(-1px)}
+footer{margin-top:0}
+.footer-main{gap:34px}
+footer a{transition:color .18s}
+footer a:hover{color:var(--gold2)}
+@media(max-width:1250px){
+  .container{width:min(var(--max),calc(100% - 40px))}
+  .header-main{gap:10px}
+  .brand img{width:130px}
+  .nav{gap:2px}
+  .nav>a,.nav-group>.nav-trigger{font-size:10px;padding:8px 6px}
+}
+@media(max-width:1050px){
+  .container{width:calc(100% - 40px)}
+  .header-main{min-height:76px}
+  .brand img{width:135px}
+  .nav{margin-right:0}
+  .hero-inner{gap:28px}
+  section{padding:60px 0}
+}
+@media(max-width:760px){
+  .container{width:calc(100% - 32px)}
+  .utility .container{align-items:flex-start;padding:7px 0}
+  .utility-right{gap:10px;flex-wrap:wrap;justify-content:flex-end}
+  .header-main{min-height:72px}
+  .brand img{width:125px}
+  .nav{box-shadow:0 18px 36px rgba(7,31,53,.14);border:1px solid var(--line);border-radius:0 0 16px 16px}
+  .nav>a,.nav-group>.nav-trigger{font-size:12px;padding:11px 12px}
+  .nav-dropdown{position:static;box-shadow:none;border:0;border-radius:10px;margin:4px 0 8px;background:#f5f8fa}
+  .hero{padding:48px 0 54px}
+  .hero-inner{gap:28px}
+  section{padding:54px 0}
+  .section-head{margin-bottom:26px}
+  .feature-copy,.band,.portal{padding:24px}
+  #research-portals .portal{padding:22px}
+  #commission-preview,#associated-companies,#research-portals,#research-ethics-benefits,#membership-validation,#certificate-validation{padding-top:50px;padding-bottom:50px}
+}
+@media(max-width:460px){
+  .container{width:calc(100% - 28px)}
+  .utility{font-size:10px}
+  .utility .container{flex-direction:column;gap:4px}
+  .utility-right{justify-content:flex-start}
+  .brand img{width:112px}
+  .hero{padding:40px 0 46px}
+  .hero h1{font-size:clamp(30px,9vw,40px)}
+  .card,.ethics-card{padding:20px}
+}
+
 </style>
 </head>
 
@@ -719,390 +838,10 @@ footer{margin-top:0}
       </article>
       <article class="card reveal">
         <div class="card-num">GOV</div>
-        <h3>ICRI-STE Statutes, Constitution &amp; Governance</h3>
+        <h3>ICRI-STE Statutes &amp; Governance</h3>
         <p>Access the dedicated portal for ICRI-STE statutes, constitutional documents and governance information.</p>
         <a href="statutes-governance.html" class="link">Open Governance Portal →</a>
       </article>
     </div>
   </div>
 </section>
-
-
-
-<section id="membership-validation">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow">ICRI-STE ECR Development</div>
-      <h2>ECR Membership Validation</h2>
-      <p>Verify Early Career Researcher membership records issued through ICRI-STE.</p>
-    </div>
-
-    <div class="portal reveal">
-      <div class="search-form">
-        <input type="text" id="membership-reference" placeholder="Enter membership reference, e.g. ICRI-STE/R&amp;D/RP/06/2026" autocomplete="off" aria-label="ECR Membership Reference">
-        <button type="button" id="verify-membership">Verify Membership</button>
-      </div>
-      <p class="note">Only public membership information is displayed.</p>
-      <div id="membership-result"><div class="result-message">Enter a membership reference number to verify an ECR membership record.</div></div>
-    </div>
-  </div>
-</section>
-
-
-<section id="certificate-validation">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow">ICRI-STE Research Credentials</div>
-      <h2>Certificate Validation Portal</h2>
-      <p>Verify public certificate records using the official certificate reference number.</p>
-    </div>
-
-    <div class="portal reveal">
-      <div class="search-form">
-        <input type="text" id="certificate-reference" placeholder="Enter certificate reference, e.g. ICRI-STE/CHI/2026/0001" autocomplete="off" aria-label="Certificate Reference">
-        <button type="button" id="verify-certificate">Verify Certificate</button>
-      </div>
-      <p class="note">Only public certificate information maintained in the official certificate register is displayed.</p>
-      <div id="certificate-result"><div class="result-message">Enter a certificate reference number to verify a certificate record.</div></div>
-    </div>
-  </div>
-</section>
-
-
-</section>
-
-</main>
-
-<footer>
-  <div class="container footer-main">
-    <div class="footer-brand">
-      <img src="assets/ICRI-STE-Logo.png" alt="ICRI-STE Logo">
-      <p>Scientific Events · Research Training · ECR Development · Research Governance · Credential Validation</p>
-    </div>
-    <div class="footer-col">
-      <h4>Platforms</h4>
-      <a href="#events">Scientific Events</a>
-      <a href="#research">Research &amp; Innovation</a>
-      <a href="#ecr">ECR Development</a>
-      <a href="#certificate-validation">Certificate Validation</a>
-    </div>
-    <div class="footer-col">
-      <h4>Research Portals</h4>
-      <a href="research-concept-note.html">Research Concept Note</a>
-      <a href="evaluator-portal.html">Evaluators Portal</a>
-      <a href="ecr-membership.html">ECR Membership</a>
-      <a href="statutes-governance.html">Statutes, Constitution &amp; Governance</a>
-      <a href="https://icriste.com/" target="_blank" rel="noopener">icriste.com</a>
-    </div>
-  </div>
-  <div class="copyright">© 2026 International Council for Research &amp; Innovation in STE (ICRI-STE). All rights reserved.</div>
-</footer>
-
-<script>
-/* =========================
-   MAIN NAVIGATION
-========================= */
-const menuBtn = document.getElementById("menu-btn");
-const mainNav = document.getElementById("main-nav");
-if(menuBtn && mainNav){
-  menuBtn.addEventListener("click",()=>{
-    const isOpen=mainNav.classList.toggle("open");
-    menuBtn.setAttribute("aria-expanded",String(isOpen));
-  });
-}
-document.querySelectorAll("#main-nav .nav-trigger").forEach(trigger=>{
-  trigger.addEventListener("click",()=>{
-    const group=trigger.closest(".nav-group");
-    const isOpen=group.classList.toggle("open");
-    trigger.setAttribute("aria-expanded",String(isOpen));
-    document.querySelectorAll("#main-nav .nav-group").forEach(other=>{
-      if(other!==group){other.classList.remove("open");const otherButton=other.querySelector(".nav-trigger");if(otherButton)otherButton.setAttribute("aria-expanded","false");}
-    });
-  });
-});
-document.querySelectorAll("#main-nav a").forEach(a=>{
-  a.addEventListener("click",()=>{
-    mainNav.classList.remove("open");
-    if(menuBtn)menuBtn.setAttribute("aria-expanded","false");
-    document.querySelectorAll("#main-nav .nav-group").forEach(group=>{group.classList.remove("open");const trigger=group.querySelector(".nav-trigger");if(trigger)trigger.setAttribute("aria-expanded","false");});
-  });
-});
-document.addEventListener("keydown",event=>{if(event.key==="Escape"){
-  mainNav?.classList.remove("open");if(menuBtn)menuBtn.setAttribute("aria-expanded","false");
-  document.querySelectorAll("#main-nav .nav-group").forEach(group=>{group.classList.remove("open");const trigger=group.querySelector(".nav-trigger");if(trigger)trigger.setAttribute("aria-expanded","false");});
-}});
-
-/* =========================
-   SITE SEARCH
-========================= */
-const sitePages = [
-  {title:"Scientific Events", text:"symposium seminars training webinars events", url:"#events"},
-  {title:"Research & Innovation", text:"research computational science artificial intelligence innovation", url:"#research"},
-  {title:"ECR Development", text:"early career researcher ECR development learn read implement experiment analyse publish", url:"#ecr"},
-  {title:"Certificate Validation", text:"certificate credential verification validation certificate reference", url:"#certificate-validation"},
-  {title:"ECR Membership Validation", text:"membership ECR member validation membership reference", url:"#membership-validation"},
-  {title:"Research Ethics & Benefits", text:"ethics governance responsible research integrity funding benefits", url:"#research-ethics-benefits"},
-  {title:"Research Concept Note Portal", text:"concept note CHI Lab researcher portal", url:"research-concept-note.html"},
-  {title:"Evaluators Portal", text:"evaluators evaluation research proposals concept notes", url:"evaluator-portal.html"},
-  {title:"ECR Membership Portal", text:"ECR membership records", url:"ecr-membership.html"},
-  {title:"Cancer Research & Data Sources", text:"cancer research lung adenocarcinoma data sources computational oncology", url:"cancer-research.html"},
-  {title:"Open Certificate Verification Portal", text:"certificate ID certificate type issue date programme event status", url:"certificates.html"},
-  {title:"Research Innovation Commission", text:"commission AI in healthcare CHI Lab research innovation", url:"commission.html"},
-  {title:"Associated Companies", text:"associated companies company innovation ecosystem BioNexa TerraNexa", url:"associated-companies.html"},
-  {title:"Scientific Document Viewer", text:"PDF Word documents manuscripts scientific review Overleaf", url:"scientific-document-viewer.html"},
-  {title:"ICRI-STE Statutes, Constitution & Governance", text:"statutes constitution governance institutional rules legal framework policies", url:"statutes-governance.html"},
-  {title:"ICRI-STE Main Website", text:"ICRI-STE international council research innovation science technology engineering", url:"https://icriste.com/"}
-];
-const searchInput=document.getElementById("site-search-input");
-const searchBtn=document.getElementById("site-search-btn");
-const searchResults=document.getElementById("search-results");
-
-function runSiteSearch(){
-  const q=searchInput.value.trim().toLowerCase();
-  if(!q){searchResults.classList.remove("show");searchResults.innerHTML="";return;}
-  const matches=sitePages.filter(p=>(p.title+" "+p.text).toLowerCase().includes(q)).slice(0,6);
-  if(!matches.length){
-    searchResults.innerHTML='<div class="search-result"><strong>No matching page found</strong><small>Try Events, Research, ECR, Certificates, Membership or Evaluators.</small></div>';
-  }else{
-    searchResults.innerHTML=matches.map(p=>`<a class="search-result" href="${p.url}" ${p.url.startsWith("http")?'target="_blank" rel="noopener"':''}><strong>${p.title}</strong><small>${p.text.split(" ").slice(0,8).join(" ")}...</small></a>`).join("");
-  }
-  searchResults.classList.add("show");
-}
-searchBtn.addEventListener("click",runSiteSearch);
-searchInput.addEventListener("keydown",e=>{if(e.key==="Enter")runSiteSearch()});
-document.addEventListener("click",e=>{
-  if(!e.target.closest(".site-search"))searchResults.classList.remove("show");
-});
-
-/* =========================
-   REVEAL ANIMATION
-========================= */
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add("visible")});
-},{threshold:.08});
-document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
-
-/* =========================
-   COMMON HELPERS
-========================= */
-function getValue(record,keys){
-  for(const key of keys){
-    if(record[key]!==undefined && record[key]!==null && String(record[key]).trim()!=="") return record[key];
-  }
-  return "—";
-}
-function createRecordItem(label,value,extraClass=""){
-  const item=document.createElement("div");
-  item.className="record-item";
-  const strong=document.createElement("strong");
-  strong.textContent=label;
-  const span=document.createElement("span");
-  span.textContent=value;
-  if(extraClass)span.className=extraClass;
-  item.append(strong,span);
-  return item;
-}
-function statusClass(status){
-  const s=String(status).toLowerCase();
-  if(s.includes("expired"))return"status-expired";
-  if(s.includes("revoked")||s.includes("invalid")||s.includes("cancelled")||s.includes("canceled"))return"status-invalid";
-  if(s.includes("active")||s.includes("verified")||s==="valid"||s.includes("issued"))return"status-valid";
-  return"status-neutral";
-}
-function messageBox(id,message){
-  const el=document.getElementById(id);
-  el.innerHTML="";
-  const box=document.createElement("div");
-  box.className="result-message";
-  box.textContent=message;
-  el.appendChild(box);
-}
-
-/* =========================
-   ECR MEMBERSHIP VALIDATION
-   Existing JSON field compatibility retained
-========================= */
-const DATA_URL="assets/ECR_Membership.json";
-let membershipRecords=[];
-
-async function loadMembershipData(){
-  const response=await fetch(DATA_URL,{cache:"no-store"});
-  if(!response.ok)throw new Error("Unable to load membership database.");
-  const data=JSON.parse(await response.text());
-  if(Array.isArray(data))return data;
-  if(Array.isArray(data.memberships))return data.memberships;
-  if(Array.isArray(data.credentials))return data.credentials;
-  if(Array.isArray(data.records))return data.records;
-  return[];
-}
-function getReference(record){
-  return String(record.reference||record.referenceNo||record.reference_no||record.refNo||record.id||record.membershipId||record.membership_id||"").trim();
-}
-function displayMembership(record){
-  const result=document.getElementById("membership-result");
-  result.innerHTML="";
-  const reference=getReference(record);
-  const name=getValue(record,["name","fullName","memberName"]);
-  const membershipType=getValue(record,["membershipType","membership_type","type"]);
-  const division=getValue(record,["division","department","researchDivision"]);
-  const status=getValue(record,["status","membershipStatus"]);
-  const issueDate=getValue(record,["issueDate","dateOfIssue","date_issued"]);
-  const validUntil=getValue(record,["validUntil","expiryDate","validity","valid_to"]);
-
-  const box=document.createElement("div");box.className="record";
-  const head=document.createElement("div");head.className="record-head";
-  const h=document.createElement("h3");h.textContent="ECR Membership Record";
-  const ref=document.createElement("span");ref.textContent=reference;
-  head.append(h,ref);
-
-  const grid=document.createElement("div");grid.className="record-grid";
-  grid.append(
-    createRecordItem("Reference No",reference),
-    createRecordItem("Name",name),
-    createRecordItem("Membership Type",membershipType),
-    createRecordItem("Division",division),
-    createRecordItem("Status",status,"status "+statusClass(status)),
-    createRecordItem("Date of Issue",issueDate),
-    createRecordItem("Valid Until",validUntil)
-  );
-  box.append(head,grid);result.appendChild(box);
-}
-function verifyMembership(){
-  const input=document.getElementById("membership-reference");
-  const reference=input.value.trim();
-  if(!reference){messageBox("membership-result","Please enter an ECR membership reference number.");return;}
-  const match=membershipRecords.find(record=>getReference(record).toLowerCase()===reference.toLowerCase());
-  if(!match){messageBox("membership-result","No membership record found for this reference.");return;}
-  displayMembership(match);
-}
-
-/* =========================
-   CERTIFICATE VALIDATION
-   Existing JSON field compatibility retained
-========================= */
-const CERTIFICATE_DATA_URL="assets/certificates.json";
-let certificateRecords=[];
-
-async function loadCertificateData(){
-  const response=await fetch(CERTIFICATE_DATA_URL,{cache:"no-store"});
-  if(!response.ok)throw new Error("Unable to load certificate database.");
-  const data=JSON.parse(await response.text());
-  if(Array.isArray(data))return data;
-  if(Array.isArray(data.certificates))return data.certificates;
-  if(Array.isArray(data.credentials))return data.credentials;
-  if(Array.isArray(data.records))return data.records;
-  return[];
-}
-function getCertificateReference(record){
-  return String(record.certificate_id||record.certificateId||record.certificateID||record.certificate_reference||record.certificateReference||record.reference||record.referenceNo||record.reference_no||record.refNo||record.id||"").trim();
-}
-function displayCertificate(record){
-  const result=document.getElementById("certificate-result");
-  result.innerHTML="";
-  const reference=getCertificateReference(record);
-  const holder=getValue(record,["certificate_holder","certificateHolder","holderName","holder_name","name","fullName","recipientName","recipient_name"]);
-  const certificateTitle=getValue(record,["certificate_type","certificateType","certificate_title","certificateTitle","title","type"]);
-  const event=getValue(record,["programme_event","programmeEvent","event","eventName","event_name","programme","program","activity"]);
-  const issueDate=getValue(record,["issue_date","issueDate","dateOfIssue","date_issued"]);
-  const status=getValue(record,["status","certificateStatus","certificate_status"]);
-  const validUntil=getValue(record,["validUntil","valid_until","expiryDate","expiry_date","validity","valid_to"]);
-
-  const box=document.createElement("div");box.className="record";
-  const head=document.createElement("div");head.className="record-head";
-  const h=document.createElement("h3");h.textContent="Certificate Verification Record";
-  const ref=document.createElement("span");ref.textContent=reference;
-  head.append(h,ref);
-
-  const grid=document.createElement("div");grid.className="record-grid";
-  grid.append(
-    createRecordItem("Certificate Reference",reference),
-    createRecordItem("Certificate Holder",holder),
-    createRecordItem("Certificate",certificateTitle),
-    createRecordItem("Event / Programme",event),
-    createRecordItem("Status",status,"status "+statusClass(status)),
-    createRecordItem("Date of Issue",issueDate),
-    createRecordItem("Valid Until",validUntil)
-  );
-  box.append(head,grid);result.appendChild(box);
-}
-function verifyCertificate(){
-  const input=document.getElementById("certificate-reference");
-  const reference=input.value.trim();
-  if(!reference){messageBox("certificate-result","Please enter a certificate reference number.");return;}
-  const match=certificateRecords.find(record=>getCertificateReference(record).toLowerCase()===reference.toLowerCase());
-  if(!match){messageBox("certificate-result","No certificate record found for this reference.");return;}
-  displayCertificate(match);
-}
-
-/* =========================
-   RESEARCH ETHICS & BENEFITS
-========================= */
-const RESEARCH_ETHICS_DATA_URL="assets/Research_Ethics_Benefits.json";
-
-async function loadResearchEthicsData(){
-  const response=await fetch(RESEARCH_ETHICS_DATA_URL,{cache:"no-store"});
-  if(!response.ok)throw new Error("Unable to load Research Ethics & Benefits resources.");
-  const data=JSON.parse(await response.text());
-  if(Array.isArray(data))return data;
-  if(Array.isArray(data.resources))return data.resources;
-  if(Array.isArray(data.links))return data.links;
-  return[];
-}
-function displayResearchEthicsResources(resources){
-  const container=document.getElementById("research-ethics-links");
-  container.innerHTML="";
-  if(!resources.length){
-    container.innerHTML='<div class="result-message" style="grid-column:1/-1">No research resources are currently available.</div>';
-    return;
-  }
-  let number=0;
-  resources.forEach(resource=>{
-    Object.entries(resource).forEach(([title,url])=>{
-      number++;
-      const card=document.createElement("article");card.className="ethics-card reveal visible";
-      const icon=document.createElement("div");icon.className="ethics-icon";icon.textContent=String(number).padStart(2,"0");
-      const heading=document.createElement("h3");heading.textContent=title;
-      const p=document.createElement("p");
-      const t=title.toLowerCase();
-      if(t.includes("ethics")||t.includes("funding"))p.textContent="Official guidance covering responsible research, ECR development, research evaluation, data security, research integrity and research funding.";
-      else if(t.includes("ecr network"))p.textContent="Information about the ICRI-STE ECR Network, research development opportunities and community engagement.";
-      else if(t.includes("membership"))p.textContent="Explore ICRI-STE membership benefits and opportunities available through the research community.";
-      else if(t.includes("help"))p.textContent="Access research guidance, support and assistance with research-related activities.";
-      else p.textContent="Official ICRI-STE resource providing guidance and information for the research community.";
-      const link=document.createElement("a");link.className="link";link.href=String(url);link.target="_blank";link.rel="noopener noreferrer";link.textContent="Open Resource →";
-      card.append(icon,heading,p,link);container.appendChild(card);
-    });
-  });
-}
-
-document.addEventListener("DOMContentLoaded",async()=>{
-  const membershipButton=document.getElementById("verify-membership");
-  const membershipInput=document.getElementById("membership-reference");
-  membershipButton.addEventListener("click",verifyMembership);
-  membershipInput.addEventListener("keydown",e=>{if(e.key==="Enter")verifyMembership()});
-  try{membershipRecords=await loadMembershipData()}catch(e){console.error(e);messageBox("membership-result","The ECR membership validation service is currently unavailable.");}
-
-  const certificateButton=document.getElementById("verify-certificate");
-  const certificateInput=document.getElementById("certificate-reference");
-  certificateButton.addEventListener("click",verifyCertificate);
-  certificateInput.addEventListener("keydown",e=>{if(e.key==="Enter")verifyCertificate()});
-  try{
-    certificateRecords=await loadCertificateData();
-    if(!certificateRecords.length) messageBox("certificate-result","The certificate register loaded, but it currently contains no records.");
-  }catch(e){
-    console.error("Certificate register loading error:",e);
-    const localFile=window.location.protocol==="file:";
-    messageBox("certificate-result",localFile
-      ? "The certificate register cannot be loaded when this page is opened directly as a local file. Upload the files to your website or run them through a local web server, and keep assets/certificates.json in the assets folder."
-      : "The certificate register could not be loaded. Check that assets/certificates.json exists at this exact path, contains valid JSON, and is published with the website.");
-  }
-
-  try{displayResearchEthicsResources(await loadResearchEthicsData())}
-  catch(e){
-    console.error(e);
-    document.getElementById("research-ethics-links").innerHTML='<div class="result-message" style="grid-column:1/-1">The Research Ethics &amp; Benefits resources are currently unavailable.</div>';
-  }
-});
-</script>
-</body>
-</html>
