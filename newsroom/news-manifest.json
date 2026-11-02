@@ -1,0 +1,56 @@
+{
+  "site": "ICRI-STE Newsroom",
+  "generated": "2026-11-02",
+  "article_count": 8,
+  "articles": [
+    {
+      "file": "international-commission-ai-healthcare-and-chi-symposium-2026.html",
+      "title": "ICRI-STE Invites Prof. Andrew Ware to Contribute to AI in Healthcare Commission",
+      "date": "2026-10-01",
+      "category": "Institutional Announcements"
+    },
+    {
+      "file": "ahmed-ben-khalfa-chi-lab-ecr-membership-2026.html",
+      "title": "Ahmed Ben Khalfa Joins the CHI Lab Research Community as an ECR-1B Member",
+      "date": "2026-10-02",
+      "category": "ECR R&D"
+    },
+    {
+      "file": "genesonic-md-al-mahfuz-chowdhury-research-highlight.html",
+      "title": "GeneSonic: Exploring Multimodal AI for Cancer Cell Identity and Biomedical Annotation",
+      "date": "2026-09-20",
+      "category": "Research Highlights"
+    },
+    {
+      "file": "saima-ejaz-chi-lab-ecr3c-membership-2026.html",
+      "title": "Dr. Saima Ejaz Recognised in the CHI Lab Research Community",
+      "date": "2026-09-08",
+      "category": "ECR R&D"
+    },
+    {
+      "file": "federated-pinns-brain-tumour-modelling-mahmuda-sristy.html",
+      "title": "Federated PINNs for Privacy-Preserving Brain Tumour Biomechanical Modelling",
+      "date": "2026-08-10",
+      "category": "Research Highlights"
+    },
+    {
+      "file": "zohaib-alam-luad-federated-transformer-proposal-milestone.html",
+      "title": "LUAD Research Proposal by Zohaib Alam Shortlisted for ICRI-STE R&D Committee Submission",
+      "date": "2026-06-20",
+      "category": "ECR R&D"
+    },
+    {
+      "file": "saddia-bano-ecr2c-chi-lab-membership-2025.html",
+      "title": "Saddia Bano Recognised as an ECR-2C Member of the CHI Lab Community",
+      "date": "2025-06-05",
+      "category": "ECR R&D"
+    },
+    {
+      "file": "ecr-rd-zohaib-alam-research-acknowledgement.html",
+      "title": "Recognising Zohaib Alam’s Research Contribution",
+      "date": null,
+      "category": "ECR R&D · Research Acknowledgement"
+    }
+  ],
+  "package": "ICRI-STE Main Website + Newsroom Integration"
+}
