@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Official ICRI-STE Newsroom: institutional news, research acknowledgements, ECR achievements, announcements and scientific highlights.">
+  <meta name="theme-color" content="#071f35">
+  <title>Newsroom | ICRI-STE</title>
+  <style>
+    :root{--navy:#071f35;--navy2:#0d3554;--blue:#0879b9;--cyan:#16a6c7;--ink:#183247;--muted:#607789;--line:#dce6ed;--paper:#f4f8fb;--white:#fff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 Arial,Helvetica,sans-serif}
+    a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+    .top{background:var(--navy);color:#d9e8f2;padding:12px max(5vw,22px);font-size:.88rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    header{background:linear-gradient(120deg,var(--navy),var(--navy2));color:#fff;padding:34px max(5vw,22px) 42px}
+    .brand{font-size:.88rem;letter-spacing:.13em;text-transform:uppercase;color:#9bd8eb;font-weight:700}
+    h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.08;margin:14px 0 12px}
+    header p{max-width:760px;color:#d5e4ed;margin:0;font-size:1.08rem}
+    nav{background:#fff;border-bottom:1px solid var(--line);padding:12px max(5vw,22px);display:flex;gap:22px;flex-wrap:wrap}
+    nav a{font-weight:700;color:var(--navy);font-size:.94rem}
+    main{max-width:1120px;margin:36px auto;padding:0 22px}
+    .intro{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:22px}
+    h2{font-size:1.55rem;color:var(--navy);margin:0 0 6px}
+    .intro p,.muted{color:var(--muted);margin:0}
+    .filters{display:flex;gap:9px;flex-wrap:wrap;margin:20px 0 24px}
+    .chip{border:1px solid #cbdbe6;border-radius:999px;padding:7px 13px;background:#fff;color:#35546a;font-size:.85rem;font-weight:700}
+    .featured{display:grid;grid-template-columns:1.4fr .8fr;gap:0;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 12px 32px #0b2b4410}
+    .feature-copy{padding:30px}
+    .eyebrow{color:var(--blue);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.76rem}
+    .featured h3{font-size:1.65rem;line-height:1.25;color:var(--navy);margin:10px 0}
+    .feature-side{background:linear-gradient(145deg,#e8f4f9,#d8eaf3);display:flex;align-items:center;justify-content:center;padding:28px;text-align:center;color:var(--navy)}
+    .feature-side .monogram{font-size:4.4rem;font-weight:800;letter-spacing:-.08em;color:#0b78a8}
+    .btn{display:inline-block;margin-top:17px;background:var(--blue);color:#fff;padding:10px 17px;border-radius:8px;font-weight:700}
+    .btn:hover{background:#075f91;text-decoration:none}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:22px 0 42px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:0 8px 22px #0b2b4408}
+    .card h3{color:var(--navy);font-size:1.12rem;line-height:1.35;margin:10px 0}
+    .card p{color:var(--muted);font-size:.94rem;margin:0}
+    .tag{display:inline-block;background:#e8f4fa;color:#086b9d;border-radius:5px;padding:4px 8px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+    .date{display:block;color:#718797;font-size:.82rem;margin-top:12px}
+    .submit{background:#eaf3f8;border:1px solid #d5e5ee;border-radius:16px;padding:24px;margin:32px 0}
+    .submit h2{font-size:1.3rem}
+    footer{background:var(--navy);color:#d2e0e9;padding:24px max(5vw,22px);font-size:.88rem}
+    footer a{color:#9bd8eb}
+    @media(max-width:760px){.featured{grid-template-columns:1fr}.feature-side{min-height:150px}.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="top"><span>International Council for Research &amp; Innovation in Science, Technology &amp; Engineering</span><span>ICRI-STE Official Newsroom</span></div>
+  <header>
+    <div class="brand">ICRI-STE · Institutional Communications</div>
+    <h1>Newsroom</h1>
+    <p>Research acknowledgements, ECR achievements, institutional announcements and scientific highlights from across the ICRI-STE community.</p>
+  </header>
+  <nav aria-label="Newsroom navigation">
+    <a href="../index.html">← Main Website</a>
+    <a href="#latest">Latest News</a>
+    <a href="#categories">News Categories</a>
+    <a href="#submit">Submit News</a>
+  </nav>
+  <main>
+    <section class="intro" id="latest">
+      <div><h2>Latest News &amp; Research Highlights</h2><p>Updates and achievements from ICRI-STE, its laboratories and research community.</p></div>
+      <span class="muted">Official institutional updates</span>
+    </section>
+    <div class="filters" id="categories">
+      <span class="chip">All News</span><span class="chip">ECR R&amp;D</span><span class="chip">Research Acknowledgements</span><span class="chip">Laboratories</span><span class="chip">Events</span><span class="chip">Announcements</span>
+    </div>
+    <section class="featured" aria-label="Featured newsroom item">
+      <div class="feature-copy">
+        <span class="eyebrow">ECR R&amp;D · Research Acknowledgement</span>
+        <h3>Recognising Zohaib Alam’s Research Contribution</h3>
+        <p class="muted">A newsroom feature recognising the research contribution of Zohaib Alam through the Computational Healthcare Intelligence (CHI) Lab, ICRI-STE.</p>
+        <a class="btn" href="newsroom/news/ecr-rd-zohaib-alam-research-acknowledgement.html">Read the News</a>
+        <span class="date">Research acknowledgement · CHI Lab</span>
+      </div>
+      <div class="feature-side"><div><div class="monogram">ECR</div><strong>Early Career Research &amp; Development</strong><br><span class="muted">Recognising research contributions</span></div></div>
+    </section>
+    <section>
+      <div class="intro" style="margin-top:38px"><div><h2>Browse News</h2><p>News items are maintained as separate pages in the newsroom news directory.</p></div></div>
+      <div class="grid">
+        <article class="card"><span class="tag">ECR R&amp;D</span><h3><a href="newsroom/news/ecr-rd-zohaib-alam-research-acknowledgement.html">Zohaib Alam — Research Acknowledgement</a></h3><p>Recognition of an Early Career Researcher’s contribution to a CHI Lab research study on mutation-centred genomic modelling for lung adenocarcinoma stage stratification.</p><span class="date">CHI Lab · Research highlight</span></article>
+        <article class="card"><span class="tag">News category</span><h3>Laboratory News</h3><p>Updates from CHI Lab and other ICRI-STE laboratories.</p><span class="date">New stories can be added here</span></article>
+        <article class="card"><span class="tag">News category</span><h3>Institutional Announcements</h3><p>Official notices, opportunities, collaborations and organisational updates.</p><span class="date">New stories can be added here</span></article>
+      </div>
+    </section>
+    <section class="submit" id="submit">
+      <h2>Contribute a News Item</h2>
+      <p>To publish an update, add its individual HTML article to <code>newsroom/news/</code>. Place related photographs, PDFs and other supporting files in <code>newsroom/uploads/</code>, then link to those files from the article. Add a link to the new article in this portal’s featured or news-card section.</p>
+      <p class="muted">Suggested categories: ECR R&amp;D, Research Acknowledgements, Research Publications, Laboratory News, Events, Partnerships and Institutional Announcements.</p>
+    </section>
+  </main>
+  <footer>© ICRI-STE · International Council for Research &amp; Innovation in Science, Technology &amp; Engineering · <a href="../index.html">Return to the main website</a></footer>
+</body>
+</html>
