@@ -1,0 +1,2 @@
+Upload supporting newsroom files into this directory (images, PDFs, posters, certificates, etc.).
+Use relative links from article pages, for example: ../uploads/your-file.pdf
