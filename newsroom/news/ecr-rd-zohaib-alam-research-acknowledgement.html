@@ -1,50 +1,459 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Research acknowledgement recognising Zohaib Alam's contribution to a CHI Lab lung adenocarcinoma research study.">
-  <title>Research Acknowledgement: Zohaib Alam | ICRI-STE</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="ICRI-STE recognises Zohaib Alam's research contribution to computational and federated learning approaches for lung adenocarcinoma genomic stage stratification through the CHI Lab.">
+
+  <meta name="author" content="International Council for Research & Innovation in STE (ICRI-STE)">
+  <meta name="theme-color" content="#071f35">
+
+  <title>Research Recognition | Zohaib Alam | ICRI-STE</title>
+
   <style>
-    :root{--navy:#071f35;--blue:#0879b9;--ink:#183247;--muted:#61798a;--line:#dce6ed}
-    *{box-sizing:border-box}body{margin:0;background:#f4f8fb;color:var(--ink);font:16px/1.75 Arial,Helvetica,sans-serif}
-    header{background:linear-gradient(120deg,#071f35,#0d3554);color:white;padding:32px max(5vw,22px)}
-    header a{color:#a8dff0}main{max-width:850px;margin:36px auto;padding:0 22px}
-    article{background:#fff;border:1px solid var(--line);border-radius:16px;padding:clamp(22px,5vw,44px);box-shadow:0 10px 30px #0b2b4410}
-    .tag{color:var(--blue);font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
-    h1{font-size:clamp(1.9rem,4vw,2.7rem);line-height:1.18;color:var(--navy);margin:12px 0}
-    h2{font-size:1.25rem;color:var(--navy);margin-top:28px}
-    .meta{color:var(--muted);font-size:.9rem;border-bottom:1px solid var(--line);padding-bottom:18px}
-    .callout{background:#eef6fa;border-left:4px solid var(--blue);padding:16px 18px;margin:24px 0}
-    .back{display:inline-block;margin-top:22px;color:var(--blue);font-weight:700}
-    footer{text-align:center;color:var(--muted);font-size:.85rem;padding:24px}
+    :root {
+      --navy: #071f35;
+      --navy-light: #103c5d;
+      --blue: #0879b9;
+      --gold: #c99a43;
+      --ink: #233b4e;
+      --muted: #657b8c;
+      --line: #dce6ed;
+      --surface: #ffffff;
+      --background: #f3f7fa;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--ink);
+      font: 16px/1.8 "Segoe UI", Arial, Helvetica, sans-serif;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .site-header {
+      background: linear-gradient(120deg, var(--navy), var(--navy-light));
+      color: #fff;
+      padding: 27px max(5vw, 22px);
+      border-bottom: 3px solid var(--gold);
+    }
+
+    .header-inner {
+      max-width: 1050px;
+      margin: auto;
+    }
+
+    .brand {
+      font-size: 1.05rem;
+      font-weight: 750;
+      letter-spacing: .045em;
+    }
+
+    .brand span {
+      color: #e1bd78;
+    }
+
+    .breadcrumb {
+      margin-top: 8px;
+      font-size: .88rem;
+      color: #c6d8e5;
+    }
+
+    .breadcrumb a {
+      color: #b5dff1;
+    }
+
+    main {
+      max-width: 930px;
+      margin: 48px auto;
+      padding: 0 22px;
+    }
+
+    .article {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      padding: clamp(25px, 5vw, 54px);
+      box-shadow: 0 14px 40px rgba(7, 31, 53, .07);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--blue);
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      color: var(--navy);
+      font-size: clamp(2rem, 4.5vw, 2.85rem);
+      line-height: 1.2;
+      letter-spacing: -.035em;
+      margin: 15px 0 13px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1.04rem;
+      margin: 0 0 20px;
+    }
+
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      padding: 16px 0;
+      margin-bottom: 26px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .87rem;
+    }
+
+    .metadata strong {
+      color: var(--navy);
+    }
+
+    p {
+      margin: 15px 0;
+    }
+
+    h2 {
+      color: var(--navy);
+      font-size: 1.3rem;
+      line-height: 1.35;
+      margin: 34px 0 12px;
+      padding-bottom: 9px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .research-title {
+      color: var(--navy-light);
+      font-weight: 700;
+    }
+
+    .research-panel {
+      background: #f0f6fa;
+      border-left: 4px solid var(--blue);
+      padding: 21px 23px;
+      margin: 25px 0;
+      border-radius: 0 10px 10px 0;
+    }
+
+    .research-panel strong {
+      color: var(--navy);
+    }
+
+    .research-panel p {
+      margin: 6px 0;
+    }
+
+    .contribution-list {
+      padding-left: 22px;
+    }
+
+    .contribution-list li {
+      margin: 9px 0;
+    }
+
+    .institutional-note {
+      background: #faf8f2;
+      border: 1px solid #eee3ca;
+      border-radius: 10px;
+      padding: 20px 23px;
+      margin: 27px 0;
+    }
+
+    .institutional-note strong {
+      color: var(--navy);
+    }
+
+    .document-section {
+      margin: 29px 0;
+      padding: 23px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fbfdfe;
+    }
+
+    .document-section h2 {
+      margin-top: 0;
+      border: 0;
+      padding: 0;
+    }
+
+    .document-link {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 11px 20px;
+      background: var(--navy);
+      color: white;
+      border-radius: 7px;
+      font-weight: 700;
+      font-size: .91rem;
+      transition: background .2s ease;
+    }
+
+    .document-link:hover {
+      background: var(--blue);
+      text-decoration: none;
+    }
+
+    .acknowledgement {
+      padding-top: 7px;
+    }
+
+    .editorial-note {
+      color: var(--muted);
+      font-size: .86rem;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+      margin-top: 32px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 26px;
+      font-weight: 700;
+      color: var(--blue);
+    }
+
+    footer {
+      text-align: center;
+      padding: 27px 20px;
+      background: var(--navy);
+      color: #c2d2de;
+      font-size: .84rem;
+      line-height: 1.8;
+    }
+
+    footer strong {
+      color: #fff;
+    }
+
+    @media(max-width:600px) {
+      main {
+        margin: 25px auto;
+        padding: 0 13px;
+      }
+
+      .article {
+        border-radius: 12px;
+      }
+
+      .metadata {
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
   </style>
 </head>
+
 <body>
-<header><strong>ICRI-STE · Newsroom</strong><p><a href="../../newsroom.html">← Back to Newsroom</a></p></header>
-<main><article>
-  <div class="tag">ECR R&amp;D · Research Acknowledgement</div>
-  <h1>Recognising Zohaib Alam’s Research Contribution</h1>
-  <div class="meta">Computational Healthcare Intelligence (CHI) Lab · ICRI-STE</div>
-  <p>The International Council for Research &amp; Innovation in Science, Technology &amp; Engineering (ICRI-STE), through its Computational Healthcare Intelligence (CHI) Lab, recognises the research contribution of <strong>Zohaib Alam</strong> to an interdisciplinary study investigating mutation-centred genomic sequence modelling for lung adenocarcinoma (LUAD) stage stratification.</p>
-  <h2>Research contribution</h2>
-  <p>The study, titled <em>“Transcript-Aware Mutation-Centred DNA Reconstruction for Lung Adenocarcinoma Stage Stratification: A Multi-Cohort Deep Learning and Federated Learning Study”</em>, explores transcript-aware mutation reconstruction and deep-learning approaches for distinguishing early-stage (I–II) from advanced-stage (III–IV) LUAD. The work reports experiments using CNN, LSTM and BiLSTM models, alongside a simulated multi-site federated-learning evaluation.</p>
-  <div class="callout"><strong>Research affiliation:</strong><br>Computational Healthcare Intelligence (CHI) Lab, International Council for Research &amp; Innovation in STE (ICRI-STE).</div>
-   <p>
-        The original academic reference is provided as the supporting document
-        associated with this newsroom record.
-      </p>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      ICRI-STE <span>·</span> Institutional Newsroom
+    </div>
+
+    <div class="breadcrumb">
+      <a href="../../newsroom.html">← Return to Newsroom</a>
+      &nbsp; / &nbsp; Research Recognition
+    </div>
+  </div>
+</header>
+
+<main>
+  <article class="article">
+
+    <div class="eyebrow">
+      Research & Development · Early Career Research Recognition
+    </div>
+
+    <h1>Recognising Research Contributions of Zohaib Alam</h1>
+
+    <p class="subtitle">
+      Advancing Computational Oncology through Genomic Modelling,
+      Deep Learning and Federated Learning
+    </p>
+
+    <div class="metadata">
+      <span><strong>Institution:</strong> ICRI-STE</span>
+      <span><strong>Research Unit:</strong> CHI Lab</span>
+      <span><strong>Focus:</strong> Computational Oncology</span>
+    </div>
+
+    <p>
+      The <strong>International Council for Research & Innovation in
+      Science, Technology & Engineering (ICRI-STE)</strong>, through its
+      <strong>Computational Healthcare Intelligence (CHI) Lab</strong>,
+      formally acknowledges the research contribution of
+      <strong>Zohaib Alam</strong> to an interdisciplinary computational
+      oncology research initiative focused on genomic sequence modelling
+      and stage stratification in lung adenocarcinoma (LUAD).
+    </p>
+
+    <p>
+      This research activity reflects the CHI Lab's commitment to
+      developing early-career research capabilities, advancing
+      computational approaches to complex biomedical problems, and
+      fostering collaborative research at the intersection of
+      mathematical modelling, artificial intelligence and precision
+      medicine.
+    </p>
+
+    <h2>Research Project and Scientific Scope</h2>
+
+    <p class="research-title">
+      "Transcript-Aware Mutation-Centred DNA Reconstruction for Lung
+      Adenocarcinoma Stage Stratification: A Multi-Cohort Deep Learning
+      and Federated Learning Study"
+    </p>
+
+    <p>
+      The study investigates computational strategies for integrating
+      transcript-aware mutation-centred genomic reconstruction with
+      deep-learning-based classification to distinguish early-stage
+      (I–II) from advanced-stage (III–IV) lung adenocarcinoma.
+    </p>
+
+    <p>
+      Its methodological framework explores the application of
+      Convolutional Neural Networks (CNN), Long Short-Term Memory
+      (LSTM) networks and Bidirectional LSTM (BiLSTM) architectures,
+      alongside a simulated multi-site federated-learning evaluation.
+      The broader objective is to investigate computational approaches
+      for genomic representation learning and privacy-conscious
+      collaborative analysis across distributed research settings.
+    </p>
+
+    <div class="research-panel">
+      <p><strong>Research domain</strong></p>
+      <p>Computational Oncology · Genomic Sequence Analysis · Deep Learning ·
+      Federated Learning · Lung Adenocarcinoma</p>
+
+      <p><strong>Research affiliation</strong></p>
       <p>
-        <a class="button" href="../documents/Zohaib_Alam_Certificate.pdf"
-           aria-label="Open the academic reference PDF for Dr Didar Murad">
-          View Academic Reference (PDF) →
-        </a>
+        Computational Healthcare Intelligence (CHI) Lab,
+        International Council for Research & Innovation in STE (ICRI-STE).
       </p>
-  
-  
-  <h2>Acknowledgement</h2>
-  <p>ICRI-STE acknowledges Zohaib Alam’s contribution to this research activity and encourages continued development through rigorous, collaborative and responsible research.</p>
-  <p><em>Editorial note:</em> This page is a newsroom acknowledgement. Any formal authorship, contribution statement, funding statement or award designation should be confirmed against the final approved research record before publication.</p>
-  <a class="back" href="../../newsroom.html">← Return to ICRI-STE Newsroom</a>
-</article></main>
-<footer>© ICRI-STE · Computational Healthcare Intelligence Lab</footer>
-</body></html>
+    </div>
+
+    <h2>Research Contribution and Development</h2>
+
+    <p>
+      Zohaib Alam's involvement forms part of the CHI Lab's
+      early-career research and development activities, which emphasise
+      the integration of computational methods with clinically relevant
+      biomedical research questions.
+    </p>
+
+    <p>The research initiative encompasses key methodological dimensions:</p>
+
+    <ul class="contribution-list">
+      <li>Exploration of transcript-aware, mutation-centred genomic sequence reconstruction.</li>
+      <li>Investigation of deep-learning architectures for LUAD stage stratification.</li>
+      <li>Comparative evaluation of CNN, LSTM and BiLSTM modelling approaches.</li>
+      <li>Investigation of simulated federated-learning strategies for multi-cohort genomic analysis.</li>
+      <li>Development of reproducible computational research practices and scientific documentation.</li>
+    </ul>
+
+    <div class="institutional-note">
+      <strong>Institutional Recognition</strong>
+      <p>
+        ICRI-STE recognises this contribution as part of its broader
+        commitment to supporting emerging researchers, strengthening
+        interdisciplinary scientific capacity, and promoting responsible,
+        reproducible and collaborative research in computational
+        healthcare intelligence.
+      </p>
+    </div>
+
+    <section class="document-section">
+      <h2>Supporting Academic Reference</h2>
+
+      <p>
+        An academic reference document associated with this newsroom
+        record is provided below for institutional reference and
+        supporting documentation.
+      </p>
+
+      <a class="document-link"
+         href="../documents/Zohaib_Alam_Certificate.pdf"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="View supporting academic reference PDF">
+        View Supporting Academic Reference (PDF) →
+      </a>
+    </section>
+
+    <h2>Acknowledgement and Continuing Development</h2>
+
+    <p class="acknowledgement">
+      ICRI-STE and its Computational Healthcare Intelligence Lab
+      acknowledge <strong>Zohaib Alam</strong> for his contribution
+      to this research initiative. The Council values the engagement
+      of emerging researchers in scientifically grounded,
+      methodologically rigorous and collaborative research, and
+      encourages their continued development through sustained
+      research participation, critical scientific inquiry and
+      responsible innovation.
+    </p>
+
+    <p>
+      Through initiatives of this nature, CHI Lab seeks to cultivate
+      the next generation of computational healthcare researchers
+      capable of addressing challenging biomedical questions through
+      advanced computational science and artificial intelligence.
+    </p>
+
+    <div class="editorial-note">
+      <strong>Editorial and Research Integrity Note:</strong>
+      This newsroom publication acknowledges research participation
+      and contribution within the stated research activity. It does
+      not independently establish authorship, a specific contribution
+      classification, peer-reviewed publication status, or research
+      validation. Such designations should be determined from the
+      approved research documentation and applicable institutional
+      and journal policies.
+    </div>
+
+    <a class="back-link" href="../../newsroom.html">
+      ← Return to ICRI-STE Institutional Newsroom
+    </a>
+
+  </article>
+</main>
+
+<footer>
+  <strong>International Council for Research & Innovation in STE (ICRI-STE)</strong>
+  <br>
+  Computational Healthcare Intelligence (CHI) Lab
+  <br>
+  © ICRI-STE · Research, Innovation & Scientific Engagement
+</footer>
+
+</body>
+</html>
+```
