@@ -1,0 +1,3069 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="ICRI-STE Scientific Events, Research Training, Early Career Researcher Development, Certificate Validation and ECR Membership Validation.">
+
+    <meta name="author"
+        content="International Council for Research &amp; Innovation in STE (ICRI-STE)">
+
+    <title>Scientific Events &amp; Research Training | ICRI-STE</title>
+
+    <style>
+
+        :root {
+            --navy-950: #061a2b;
+            --navy-900: #071f35;
+            --navy-800: #0b3557;
+            --navy-700: #104b73;
+            --navy-600: #17638f;
+
+            --gold-500: #d59b32;
+            --gold-400: #e8c36d;
+            --gold-300: #f1d99a;
+
+            --white: #ffffff;
+            --light: #f5f8fb;
+            --text: #243746;
+            --muted: #647789;
+
+            --shadow: 0 12px 35px rgba(6, 26, 43, 0.12);
+            --radius: 14px;
+        }
+
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.65;
+            color: var(--text);
+            background: var(--light);
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        /* =========================
+           TOP BAR
+        ========================== */
+
+        .top-bar {
+            background: var(--navy-950);
+            color: var(--gold-300);
+            text-align: center;
+            padding: 8px 20px;
+            font-size: 13px;
+            letter-spacing: 0.3px;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header {
+            background: var(--white);
+            border-bottom: 1px solid #e5e9ed;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+
+        .header-inner {
+            max-width: 1200px;
+            margin: auto;
+            min-height: 92px;
+            padding: 15px 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            min-width: 0;
+        }
+
+
+        .brand img {
+            width: 185px;
+            height: auto;
+        }
+
+
+        .brand-text {
+            border-left: 1px solid #dce2e7;
+            padding-left: 18px;
+        }
+
+
+        .brand-text strong {
+            display: block;
+            color: var(--navy-800);
+            font-size: 15px;
+            line-height: 1.3;
+        }
+
+
+        .brand-text span {
+            display: block;
+            color: var(--muted);
+            font-size: 12px;
+            margin-top: 3px;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================== */
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 7px;
+            flex-wrap: wrap;
+        }
+
+
+        nav a {
+            color: var(--navy-800);
+            font-size: 13px;
+            font-weight: 600;
+            padding: 8px 11px;
+            border-radius: 7px;
+            transition: 0.25s ease;
+            white-space: nowrap;
+        }
+
+
+        nav a:hover {
+            color: var(--white);
+            background: var(--navy-800);
+        }
+
+
+        nav a.ecr-membership {
+            color: var(--navy-800);
+            background: #fffaf0;
+            border: 1px solid #e5cf9d;
+        }
+
+
+        nav a.ecr-membership:hover {
+            color: var(--white);
+            background: var(--gold-500);
+            border-color: var(--gold-500);
+        }
+
+        nav a.research-concept-note {
+            color: var(--navy-800);
+            background: #f3f7fa;
+            border: 1px solid #d6e0e7;
+        }
+
+        nav a.research-concept-note:hover {
+            color: var(--white);
+            background: var(--navy-800);
+            border-color: var(--navy-800);
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(6, 26, 43, 0.98),
+                    rgba(11, 53, 87, 0.96)
+                );
+
+            color: var(--white);
+            padding: 80px 25px 75px;
+        }
+
+
+        .hero-inner {
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+
+        .hero-label {
+            display: inline-block;
+            color: var(--gold-300);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+
+        .hero h1 {
+            font-size: clamp(36px, 5vw, 58px);
+            line-height: 1.12;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+
+        .hero h1 span {
+            color: var(--gold-400);
+        }
+
+
+        .hero p {
+            max-width: 720px;
+            color: #dbe8f1;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+
+        .hero-actions {
+            margin-top: 30px;
+            display: flex;
+            gap: 13px;
+            flex-wrap: wrap;
+        }
+
+
+        .button {
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.25s ease;
+        }
+
+
+        .button-primary {
+            background: var(--gold-500);
+            color: var(--navy-950);
+        }
+
+
+        .button-primary:hover {
+            background: var(--gold-400);
+            transform: translateY(-2px);
+        }
+
+
+        .button-secondary {
+            border: 1px solid rgba(255,255,255,0.35);
+            color: var(--white);
+        }
+
+
+        .button-secondary:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            filter: drop-shadow(0 18px 35px rgba(0,0,0,0.25));
+        }
+
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================== */
+
+        main {
+            overflow: hidden;
+        }
+
+
+        section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 75px 25px;
+        }
+
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+
+        .section-label {
+            color: var(--gold-500);
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            margin-bottom: 9px;
+        }
+
+
+        .section-heading h2 {
+            color: var(--navy-800);
+            font-size: 32px;
+            line-height: 1.25;
+            margin-bottom: 12px;
+        }
+
+
+        .section-heading p {
+            max-width: 760px;
+            margin: auto;
+            color: var(--muted);
+        }
+
+
+        /* =========================
+           FEATURED EVENT
+        ========================== */
+
+        .featured-event {
+            background: var(--white);
+            border: 1px solid #e1e7ec;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+
+            display: grid;
+            grid-template-columns: 1fr 0.85fr;
+        }
+
+
+        .featured-content {
+            padding: 42px;
+        }
+
+
+        .event-date {
+            display: inline-block;
+            background: #fff5dc;
+            color: #8a6014;
+            padding: 7px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 800;
+            margin-bottom: 17px;
+        }
+
+
+        .featured-content h3 {
+            color: var(--navy-800);
+            font-size: 27px;
+            line-height: 1.3;
+            margin-bottom: 17px;
+        }
+
+
+        .featured-content p {
+            color: var(--muted);
+            margin-bottom: 22px;
+        }
+
+
+        .event-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+
+        .event-meta span {
+            background: #f1f5f8;
+            color: var(--navy-700);
+            padding: 6px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+
+        .featured-visual {
+            min-height: 350px;
+            background: var(--navy-900);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 35px;
+        }
+
+
+        .featured-visual img {
+            width: 100%;
+            max-width: 470px;
+        }
+
+
+        /* =========================
+           EVENT CARDS
+        ========================== */
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+
+        .event-card {
+            background: var(--white);
+            border: 1px solid #e2e8ed;
+            border-radius: var(--radius);
+            padding: 28px;
+            box-shadow: 0 8px 25px rgba(6,26,43,0.06);
+            transition: 0.25s ease;
+        }
+
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+
+        .card-number {
+            width: 42px;
+            height: 42px;
+            border-radius: 9px;
+            background: var(--navy-800);
+            color: var(--gold-300);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+
+        .event-card h3 {
+            color: var(--navy-800);
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+
+        .event-card p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+
+        .card-link {
+            color: var(--navy-700);
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+
+        .card-link:hover {
+            color: var(--gold-500);
+        }
+
+
+        /* =========================
+           CERTIFICATE / MEMBERSHIP
+        ========================== */
+
+        .certificate-section {
+            background: var(--navy-900);
+            color: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+
+        .certificate-inner {
+            padding: 50px;
+            text-align: center;
+        }
+
+
+        .certificate-label {
+            color: var(--gold-300);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+
+        .certificate-inner h2 {
+            font-size: 31px;
+            margin-bottom: 14px;
+        }
+
+
+        .certificate-inner p {
+            max-width: 760px;
+            margin: 0 auto 25px;
+            color: #d7e5ee;
+        }
+
+
+        .validation-button {
+            display: inline-block;
+            background: var(--gold-500);
+            color: var(--navy-950);
+            padding: 12px 22px;
+            border-radius: 8px;
+            font-weight: 800;
+            font-size: 14px;
+            transition: 0.25s ease;
+        }
+
+
+        .validation-button:hover {
+            background: var(--gold-400);
+            transform: translateY(-2px);
+        }
+
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 22px;
+        }
+
+
+        .info-card {
+            background: var(--white);
+            border: 1px solid #e1e7ec;
+            border-radius: var(--radius);
+            padding: 28px;
+        }
+
+
+        .info-card-icon {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #fff5dc;
+            color: #8a6014;
+            border-radius: 8px;
+
+            font-weight: 800;
+            margin-bottom: 17px;
+        }
+
+
+        .info-card h3 {
+            color: var(--navy-800);
+            font-size: 18px;
+            margin-bottom: 9px;
+        }
+
+
+        .info-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           ECR MEMBERSHIP VALIDATION
+        ========================== */
+
+        #ecr-membership-validation {
+            padding-top: 20px;
+        }
+
+
+        .membership-intro {
+            text-align: center;
+            max-width: 780px;
+            margin: 0 auto 30px;
+            color: var(--muted);
+        }
+
+
+        .membership-portal {
+            background: var(--white);
+            border: 1px solid #e1e7ec;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 38px;
+            max-width: 850px;
+            margin: auto;
+        }
+
+
+        .membership-search {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 18px;
+        }
+
+
+        .membership-search input {
+            flex: 1;
+            min-width: 0;
+            padding: 14px 15px;
+            border: 1px solid #cfd9e1;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+        }
+
+
+        .membership-search input:focus {
+            border-color: var(--navy-600);
+            box-shadow: 0 0 0 3px rgba(23,99,143,0.1);
+        }
+
+
+        .membership-search button {
+            border: none;
+            background: var(--navy-800);
+            color: var(--white);
+            padding: 0 22px;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.25s ease;
+        }
+
+
+        .membership-search button:hover {
+            background: var(--navy-700);
+        }
+
+
+        .membership-note {
+            color: var(--muted);
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+
+
+        #membership-result {
+            margin-top: 20px;
+        }
+
+
+        .result-message {
+            padding: 16px;
+            border-radius: 8px;
+            background: #f3f6f8;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+
+        .membership-record {
+            border: 1px solid #dfe6eb;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+
+        .record-header {
+            background: var(--navy-900);
+            color: var(--white);
+            padding: 20px 22px;
+        }
+
+
+        .record-header h3 {
+            font-size: 19px;
+            margin-bottom: 4px;
+        }
+
+
+        .record-header span {
+            color: var(--gold-300);
+            font-size: 12px;
+        }
+
+
+        .record-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+
+        .record-item {
+            padding: 17px 20px;
+            border-bottom: 1px solid #e5eaee;
+        }
+
+
+        .record-item:nth-child(odd) {
+            border-right: 1px solid #e5eaee;
+        }
+
+
+        .record-item strong {
+            display: block;
+            color: var(--navy-700);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            margin-bottom: 4px;
+        }
+
+
+        .record-item span {
+            color: var(--text);
+            font-size: 14px;
+        }
+
+
+        .status {
+            display: inline-block;
+            padding: 4px 9px;
+            border-radius: 20px;
+            font-size: 11px !important;
+            font-weight: 800;
+        }
+
+
+        .status-valid {
+            color: #216b42 !important;
+            background: #e8f5ed;
+        }
+
+
+        .status-expired {
+            color: #8b6017 !important;
+            background: #fff4d8;
+        }
+
+
+        .status-invalid {
+            color: #8b3030 !important;
+            background: #fae8e8;
+        }
+
+
+        .status-neutral {
+            color: var(--navy-700) !important;
+            background: #e9f0f5;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: var(--navy-950);
+            color: #c8d6df;
+            margin-top: 50px;
+        }
+
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: auto;
+            padding: 42px 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+
+        .footer-brand img {
+            width: 135px;
+        }
+
+
+        .footer-text {
+            font-size: 12px;
+            color: #aebfca;
+        }
+
+
+        .footer-right {
+            text-align: right;
+            font-size: 12px;
+            color: #aebfca;
+        }
+
+
+        .footer-right a {
+            color: var(--gold-300);
+        }
+
+
+        .footer-right a:hover {
+            color: var(--white);
+        }
+
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            text-align: center;
+            padding: 15px 20px;
+            font-size: 11px;
+            color: #91a5b2;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 1000px) {
+
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 100%;
+                justify-content: flex-start;
+            }
+
+            .hero-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .events-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .featured-event {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .brand {
+                align-items: flex-start;
+            }
+
+            .brand img {
+                width: 150px;
+            }
+
+            .brand-text {
+                display: none;
+            }
+
+            .events-grid,
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .record-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .record-item:nth-child(odd) {
+                border-right: none;
+            }
+
+            .membership-search {
+                flex-direction: column;
+            }
+
+            .membership-search button {
+                min-height: 46px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-right {
+                text-align: left;
+            }
+
+        }
+
+
+        @media (max-width: 450px) {
+
+            .hero {
+                padding: 55px 18px;
+            }
+
+            section {
+                padding: 55px 18px;
+            }
+
+            .header-inner {
+                padding: 14px 18px;
+            }
+
+            nav {
+                gap: 4px;
+            }
+
+            nav a {
+                font-size: 12px;
+                padding: 7px 8px;
+            }
+
+            .featured-content,
+            .certificate-inner,
+            .membership-portal {
+                padding: 25px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         TOP BAR
+    ========================== -->
+
+    <div class="top-bar">
+        International Council for Research &amp; Innovation in STE (ICRI-STE)
+    </div>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <div class="header-inner">
+
+            <a href="index.html" class="brand">
+
+                <img
+                    src="assets/ICRI-STE-Logo.png"
+                    alt="ICRI-STE Logo">
+
+                <div class="brand-text">
+                    <strong>Scientific Events &amp; Research Training</strong>
+                    <span>Research • Innovation • Early Career Researcher Development</span>
+                </div>
+
+            </a>
+
+
+            <nav aria-label="Main Navigation">
+
+                <a href="#events">
+                    Events
+                </a>
+
+                <a href="#certificate-validation">
+                    Certificate Validation
+                </a>
+
+                <a
+                    href="https://docs.google.com/document/d/1HyDjADbe-Dy9n1VscD6MnNBXNusHPFBGFKmwU1M-Bok/edit?usp=sharing"
+                    target="_blank"
+                    rel="noopener">
+                    ECR Policy
+                </a>
+
+                <a
+                    href="ecr-membership.html"
+                    class="ecr-membership"
+                    aria-label="Open ICRI-STE ECR Membership Validation Portal">
+                    ECR Membership Validation
+                </a>
+
+                <a
+                    href="research-concept-note.html"
+                    class="research-concept-note"
+                    aria-label="Open CHI Lab Research Concept Note Portal">
+                    Research Concept Note
+                </a>
+
+                <a
+                    href="evaluator-portal.html"
+                    class="research-concept-note"
+                    aria-label="Open ICRI-STE Evaluators Portal">
+                    Evaluators Portal
+                </a>
+
+                <a
+                    href="https://icriste.com/"
+                    target="_blank"
+                    rel="noopener">
+                    ICRI-STE
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section class="hero">
+
+            <div class="hero-inner">
+
+                <div>
+
+                    <div class="hero-label">
+                        ICRI-STE Scientific Development Framework
+                    </div>
+
+                    <h1>
+                        Scientific Events
+                        <span>&amp;</span>
+                        Research Training
+                    </h1>
+
+                    <p>
+                        A dedicated platform for scientific events,
+                        research training, Early Career Researcher
+                        development, scientific communication and
+                        research credential validation through
+                        ICRI-STE.
+                    </p>
+
+
+                    <div class="hero-actions">
+
+                        <a
+                            href="#events"
+                            class="button button-primary">
+                            Explore Events
+                        </a>
+
+                        <a
+                            href="certificates.html"
+                            class="button button-secondary">
+                            Certificate Validation
+                        </a>
+
+                        <a
+                            href="ecr-membership.html"
+                            class="button button-secondary">
+                            ECR Membership Validation
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-image">
+
+                    <img
+                        src="assets/diagram_1.png"
+                        alt="ICRI-STE Scientific Events and Research Training Framework">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EVENTS
+        ========================== -->
+
+        <section id="events">
+
+            <div class="section-heading">
+
+                <div class="section-label">
+                    Scientific Events
+                </div>
+
+                <h2>
+                    Events, Training &amp; Research Development
+                </h2>
+
+                <p>
+                    Scientific activities supporting researchers,
+                    Early Career Researchers and interdisciplinary
+                    collaboration across science, technology,
+                    engineering and related research fields.
+                </p>
+
+            </div>
+
+
+            <div class="featured-event">
+
+                <div class="featured-content">
+
+                    <span class="event-date">
+                        15 December 2026
+                    </span>
+
+                    <h3>
+                        1st Virtual International Symposium of
+                        CHI Lab Scientists &amp; Early Career
+                        Researchers 2026
+                    </h3>
+
+                    <p>
+                        A virtual scientific symposium bringing
+                        together CHI Lab scientists and Early Career
+                        Researchers to present research, prototypes,
+                        computational methods and emerging work in
+                        Computational Healthcare Intelligence.
+                    </p>
+
+
+                    <div class="event-meta">
+
+                        <span>
+                            Virtual
+                        </span>
+
+                        <span>
+                            CHI Lab
+                        </span>
+
+                        <span>
+                            ECR Development
+                        </span>
+
+                        <span>
+                            Research Presentation
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="https://partnerships2024.github.io/"
+                        target="_blank"
+                        rel="noopener"
+                        class="button button-primary">
+                        Symposium Portal
+                    </a>
+
+                </div>
+
+
+                <div class="featured-visual">
+
+                    <img
+                        src="assets/symposium-figure-1.png"
+                        alt="CHI Lab Scientific Symposium">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             OTHER EVENTS
+        ========================== -->
+
+        <section>
+
+            <div class="section-heading">
+
+                <div class="section-label">
+                    ICRI-STE Activities
+                </div>
+
+                <h2>
+                    Scientific Events &amp; Training
+                </h2>
+
+            </div>
+
+
+            <div class="events-grid">
+
+
+                <article class="event-card">
+
+                    <div class="card-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Research Training Programme
+                    </h3>
+
+                    <p>
+                        Structured research training supporting
+                        Early Career Researchers in literature
+                        review, computational implementation,
+                        experimentation, analysis, documentation,
+                        reproducibility and scientific communication.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="card-link">
+                        Research Training →
+                    </a>
+
+                </article>
+
+
+                <article class="event-card">
+
+                    <div class="card-number">
+                        02
+                    </div>
+
+                    <h3>
+                        ICRI-STE Scientific Seminar Series
+                    </h3>
+
+                    <p>
+                        Scientific seminars focused on emerging
+                        research methodologies, interdisciplinary
+                        science, computational research and
+                        innovation.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="card-link">
+                        Scientific Seminars →
+                    </a>
+
+                </article>
+
+
+                <article class="event-card">
+
+                    <div class="card-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Research &amp; Innovation Webinar Series
+                    </h3>
+
+                    <p>
+                        Online sessions covering emerging research
+                        technologies, artificial intelligence,
+                        computational science, innovation and
+                        Early Career Researcher development.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="card-link">
+                        Webinar Series →
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CHI LAB RESEARCH CONCEPT NOTE PORTAL
+        ========================== -->
+
+        <section id="research-concept-note">
+
+            <div class="section-heading">
+
+                <div class="section-label">
+                    CHI Lab Research Development
+                </div>
+
+                <h2>
+                    Research Concept Note Portal
+                </h2>
+
+                <p>
+                    Secure access point for CHI Lab researchers to
+                    access their assigned Research Concept Note workspace.
+                </p>
+
+            </div>
+
+            <div class="certificate-section">
+
+                <div class="certificate-inner">
+
+                    <div class="certificate-label">
+                        CHI Lab Researchers
+                    </div>
+
+                    <h2>
+                        Research Concept Note
+                    </h2>
+
+                    <p>
+                        Researchers may sign in using the credentials
+                        provided through the official CHI Lab research
+                        system.
+                    </p>
+
+                    <a
+                        href="research-concept-note.html"
+                        class="validation-button">
+                        Open Research Concept Note Portal
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- =========================
+             EVALUATORS PORTAL
+        ========================== -->
+
+        <section id="evaluators-portal">
+
+            <div class="certificate-section">
+
+                <div class="certificate-inner">
+
+                    <div class="certificate-label">
+                        ICRI-STE Research Evaluation
+                    </div>
+
+                    <h2>
+                        Evaluators Portal
+                    </h2>
+
+                    <p>
+                        Dedicated access for nominated evaluators to review
+                        Research Concept Notes and Comprehensive Research Proposals
+                        submitted through the ICRI-STE Global Research Community.
+                    </p>
+
+                    <a
+                        href="evaluator-portal.html"
+                        class="validation-button">
+                        Open Evaluators Portal
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="section-heading" style="margin-top:28px;">
+
+                <div class="section-label">
+                    ICRI-STE Evaluation Framework
+                </div>
+
+                <h2>
+                    Evaluator Nomination &amp; Assessment
+                </h2>
+
+            </div>
+
+            <div class="info-grid">
+
+                <div class="info-card" style="grid-column:1 / -1;">
+                    <p>
+                        Under the executive direction of the President or Vice Presidents
+                        of ICRI-STE, and in consultation with the respective Lab Directors,
+                        evaluators shall be nominated to assess Research Concept Notes and
+                        Comprehensive Research Proposals.
+                    </p>
+
+                    <p style="margin-top:14px;">
+                        Evaluators may be selected from senior members of the respective
+                        ICRI-STE Labs, members of the concerned Lab Commissions, or qualified
+                        academic experts, including Full Professors and other senior academics
+                        from recognized national and international universities affiliated with,
+                        or relevant to, the respective Lab’s research domain.
+                    </p>
+
+                    <p style="margin-top:14px;">
+                        The evaluation process shall cover research submissions from the broader
+                        ICRI-STE Global Research Community, including Principal Scientists,
+                        Senior Scientists, Junior Scientists, and Early Career Researchers (ECRs)
+                        at the ECR1-BS (Undergraduate), ECR2-MS (Master’s), and ECR3-PhD (Doctoral) levels.
+                    </p>
+
+                    <p style="margin-top:14px;">
+                        All nominated evaluators are expected to provide independent, objective,
+                        and academically rigorous assessments in accordance with ICRI-STE’s
+                        research standards, ethical principles, and evaluation policies.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CERTIFICATE VALIDATION
+        ========================== -->
+
+        <section id="certificate-validation">
+
+            <div class="certificate-section">
+
+                <div class="certificate-inner">
+
+                    <div class="certificate-label">
+                        ICRI-STE Research Credentials
+                    </div>
+
+                    <h2>
+                        Certificate Validation Portal
+                    </h2>
+
+                    <p>
+                        Verify certificates issued through
+                        ICRI-STE scientific events, research
+                        training and Early Career Researcher
+                        development activities using the official
+                        online validation portal.
+                    </p>
+
+                    <a
+                        href="certificates.html"
+                        class="validation-button">
+                        Open Certificate Validation Portal
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 CERTIFICATE SEARCH
+            ========================== -->
+
+            <div class="membership-portal" style="margin-top:22px;">
+
+                <div class="membership-search">
+
+                    <input
+                        type="text"
+                        id="certificate-reference"
+                        placeholder="Enter certificate reference, e.g. ICRI-STE/CHI/2026/0001"
+                        autocomplete="off"
+                        aria-label="Certificate Reference">
+
+                    <button
+                        type="button"
+                        id="verify-certificate">
+                        Verify
+                    </button>
+
+                </div>
+
+
+                <p class="membership-note">
+                    Enter the official certificate reference number
+                    issued by ICRI-STE. Only public certificate
+                    information is displayed.
+                </p>
+
+
+                <div id="certificate-result">
+
+                    <div class="result-message">
+                        Enter a certificate reference number to
+                        verify a certificate record.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-grid">
+
+                <div class="info-card">
+
+                    <div class="info-card-icon">
+                        ID
+                    </div>
+
+                    <h3>
+                        Certificate Reference
+                    </h3>
+
+                    <p>
+                        Use the official certificate reference
+                        number issued by ICRI-STE to retrieve the
+                        corresponding public certificate record.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-card-icon">
+                        ✓
+                    </div>
+
+                    <h3>
+                        Online Validation
+                    </h3>
+
+                    <p>
+                        Certificate records can be checked online
+                        through the dedicated ICRI-STE certificate
+                        validation portal.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-card-icon">
+                        i
+                    </div>
+
+                    <h3>
+                        Public Information
+                    </h3>
+
+                    <p>
+                        The validation portal displays only the
+                        public information maintained in the
+                        official certificate register.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ECR MEMBERSHIP VALIDATION
+        ========================== -->
+
+        <section id="ecr-membership-validation">
+
+            <div class="section-heading">
+
+                <div class="section-label">
+                    ICRI-STE Early Career Researcher Development
+                </div>
+
+                <h2>
+                    ECR Membership Validation
+                </h2>
+
+                <p>
+                    Verify Early Career Researcher membership
+                    records issued through the International
+                    Council for Research &amp; Innovation in STE
+                    (ICRI-STE).
+                </p>
+
+            </div>
+
+
+            <div class="membership-portal">
+
+                <div class="membership-search">
+
+                    <input
+                        type="text"
+                        id="membership-reference"
+                        placeholder="Enter membership reference, e.g. ICRI-STE/R&amp;D/RP/06/2026"
+                        autocomplete="off"
+                        aria-label="ECR Membership Reference">
+
+                    <button
+                        type="button"
+                        id="verify-membership">
+                        Verify
+                    </button>
+
+                </div>
+
+
+                <p class="membership-note">
+                    Enter the official ECR membership reference
+                    number provided by ICRI-STE. Only public
+                    membership information is displayed.
+                </p>
+
+
+                <div id="membership-result">
+
+                    <div class="result-message">
+                        Enter a membership reference number to
+                        verify an ECR membership record.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ECR DEVELOPMENT INFORMATION
+        ========================== -->
+
+        <section>
+
+            <div class="section-heading">
+
+                <div class="section-label">
+                    Early Career Researcher Development
+                </div>
+
+                <h2>
+                    Researcher Development Framework
+                </h2>
+
+                <p>
+                    ICRI-STE supports a structured research
+                    development pathway from foundational learning
+                    to reproducible research, collaboration and
+                    scientific publication.
+                </p>
+
+            </div>
+
+
+            <div class="info-grid">
+
+                <div class="info-card">
+
+                    <div class="info-card-icon">
+                        01
+                    </div>
+
+                    <h3>
+                        Learn &amp; Read
+                    </h3>
+
+                    <p>
+                        Develop foundational knowledge through
+                        research literature, scientific resources
+                        and structured training.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-card-icon">
+                        02
+                    </div>
+
+                    <h3>
+                        Implement &amp; Experiment
+                    </h3>
+
+                    <p>
+                        Apply computational methods, develop
+                        prototypes and conduct structured research
+                        experiments.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-card-icon">
+                        03
+                    </div>
+
+                    <h3>
+                        Analyse &amp; Document
+                    </h3>
+
+                    <p>
+                        Analyse results, document methodologies,
+                        maintain research records and support
+                        reproducibility.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-card-icon">
+                        04
+                    </div>
+
+                    <h3>
+                        Reproduce &amp; Collaborate
+                    </h3>
+
+                    <p>
+                        Reproduce research workflows, collaborate
+                        across disciplines and contribute to
+                        research communities.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-card-icon">
+                        05
+                    </div>
+
+                    <h3>
+                        Publish
+                    </h3>
+
+                    <p>
+                        Communicate research findings through
+                        scientific reports, presentations,
+                        posters, manuscripts and publications.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-card-icon">
+                        06
+                    </div>
+
+                    <h3>
+                        Research Ethics
+                    </h3>
+
+                    <p>
+                        Follow responsible research practices,
+                        scientific integrity, data protection,
+                        transparency and reproducibility principles.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-inner">
+
+            <div class="footer-brand">
+
+                <img
+                    src="assets/ICRI-STE-Logo.png"
+                    alt="ICRI-STE Logo">
+
+                <div class="footer-text">
+                    International Scientific Events • Research Training
+                    • Early Career Researcher Development
+                </div>
+
+            </div>
+
+
+            <div class="footer-right">
+
+                <div>
+                    International Council for Research &amp;
+                    Innovation in STE
+                </div>
+
+                <div style="margin-top: 6px;">
+
+                    <a
+                        href="https://icriste.com/"
+                        target="_blank"
+                        rel="noopener">
+                        icriste.com
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="youtube-channel" style="text-align:center;padding:20px 20px;border-top:1px solid rgba(255,255,255,0.08);">
+
+            <a
+                href="https://www.youtube.com/@ICRI-STEInsights"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#c62828;color:#ffffff;padding:12px 22px;border-radius:8px;font-size:13px;font-weight:800;text-decoration:none;transition:0.25s ease;">
+                <span aria-hidden="true">▶</span>
+                Visit ICRI-STE Insights on YouTube
+            </a>
+
+            <p style="font-size:12px;color:#aebfca;margin-top:10px;">
+                Follow our scientific insights, research highlights, institutional updates and community activities.
+            </p>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 International Council for Research &amp;
+            Innovation in STE (ICRI-STE). All rights reserved.
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         ECR MEMBERSHIP + CERTIFICATE
+         VALIDATION JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        /* =========================================================
+           ECR MEMBERSHIP VALIDATION
+           EXISTING CODE — KEPT INTACT
+        ========================================================= */
+
+        const DATA_URL = "assets/ECR_Membership.joson";
+
+        let membershipRecords = [];
+
+
+        async function loadMembershipData() {
+
+            const response = await fetch(
+                DATA_URL,
+                {
+                    cache: "no-store"
+                }
+            );
+
+
+            if (!response.ok) {
+
+                throw new Error(
+                    `Unable to load membership database (${response.status}).`
+                );
+
+            }
+
+
+            const text = await response.text();
+
+            const data = JSON.parse(text);
+
+
+            if (Array.isArray(data)) {
+                return data;
+            }
+
+
+            if (Array.isArray(data.memberships)) {
+                return data.memberships;
+            }
+
+
+            if (Array.isArray(data.credentials)) {
+                return data.credentials;
+            }
+
+
+            if (Array.isArray(data.records)) {
+                return data.records;
+            }
+
+
+            return [];
+
+        }
+
+
+        function getReference(record) {
+
+            return String(
+
+                record.reference ||
+                record.referenceNo ||
+                record.reference_no ||
+                record.refNo ||
+                record.id ||
+                record.membershipId ||
+                record.membership_id ||
+                ""
+
+            ).trim();
+
+        }
+
+
+        function getValue(record, keys) {
+
+            for (const key of keys) {
+
+                if (
+                    record[key] !== undefined &&
+                    record[key] !== null &&
+                    String(record[key]).trim() !== ""
+                ) {
+
+                    return record[key];
+
+                }
+
+            }
+
+
+            return "—";
+
+        }
+
+
+        function statusClass(status) {
+
+            const s =
+                String(status).toLowerCase();
+
+
+            if (
+                s.includes("active") ||
+                s.includes("verified") ||
+                s.includes("valid")
+            ) {
+
+                return "status-valid";
+
+            }
+
+
+            if (s.includes("expired")) {
+
+                return "status-expired";
+
+            }
+
+
+            if (
+                s.includes("revoked") ||
+                s.includes("invalid")
+            ) {
+
+                return "status-invalid";
+
+            }
+
+
+            return "status-neutral";
+
+        }
+
+
+        function createRecordItem(
+            label,
+            value,
+            extraClass = ""
+        ) {
+
+            const item =
+                document.createElement("div");
+
+            item.className = "record-item";
+
+
+            const strong =
+                document.createElement("strong");
+
+            strong.textContent = label;
+
+
+            const span =
+                document.createElement("span");
+
+            span.textContent = value;
+
+
+            if (extraClass) {
+
+                span.className = extraClass;
+
+            }
+
+
+            item.appendChild(strong);
+
+            item.appendChild(span);
+
+
+            return item;
+
+        }
+
+
+        function displayMembership(record) {
+
+            const result =
+                document.getElementById(
+                    "membership-result"
+                );
+
+
+            result.innerHTML = "";
+
+
+            const reference =
+                getReference(record);
+
+
+            const name =
+                getValue(
+                    record,
+                    [
+                        "name",
+                        "fullName",
+                        "memberName"
+                    ]
+                );
+
+
+            const membershipType =
+                getValue(
+                    record,
+                    [
+                        "membershipType",
+                        "membership_type",
+                        "type"
+                    ]
+                );
+
+
+            const division =
+                getValue(
+                    record,
+                    [
+                        "division",
+                        "department",
+                        "researchDivision"
+                    ]
+                );
+
+
+            const status =
+                getValue(
+                    record,
+                    [
+                        "status",
+                        "membershipStatus"
+                    ]
+                );
+
+
+            const issueDate =
+                getValue(
+                    record,
+                    [
+                        "issueDate",
+                        "dateOfIssue",
+                        "date_issued"
+                    ]
+                );
+
+
+            const validUntil =
+                getValue(
+                    record,
+                    [
+                        "validUntil",
+                        "expiryDate",
+                        "validity",
+                        "valid_to"
+                    ]
+                );
+
+
+            const recordBox =
+                document.createElement("div");
+
+            recordBox.className =
+                "membership-record";
+
+
+            const header =
+                document.createElement("div");
+
+            header.className =
+                "record-header";
+
+
+            const title =
+                document.createElement("h3");
+
+            title.textContent =
+                "ECR Membership Record";
+
+
+            const referenceText =
+                document.createElement("span");
+
+            referenceText.textContent =
+                reference;
+
+
+            header.appendChild(title);
+
+            header.appendChild(referenceText);
+
+
+            const grid =
+                document.createElement("div");
+
+            grid.className =
+                "record-grid";
+
+
+            grid.appendChild(
+                createRecordItem(
+                    "Reference No",
+                    reference
+                )
+            );
+
+
+            grid.appendChild(
+                createRecordItem(
+                    "Name",
+                    name
+                )
+            );
+
+
+            grid.appendChild(
+                createRecordItem(
+                    "Membership Type",
+                    membershipType
+                )
+            );
+
+
+            grid.appendChild(
+                createRecordItem(
+                    "Division",
+                    division
+                )
+            );
+
+
+            grid.appendChild(
+                createRecordItem(
+                    "Status",
+                    status,
+                    `status ${statusClass(status)}`
+                )
+            );
+
+
+            grid.appendChild(
+                createRecordItem(
+                    "Date of Issue",
+                    issueDate
+                )
+            );
+
+
+            grid.appendChild(
+                createRecordItem(
+                    "Valid Until",
+                    validUntil
+                )
+            );
+
+
+            recordBox.appendChild(header);
+
+            recordBox.appendChild(grid);
+
+
+            result.appendChild(recordBox);
+
+        }
+
+
+        function showMessage(message) {
+
+            const result =
+                document.getElementById(
+                    "membership-result"
+                );
+
+
+            result.innerHTML = "";
+
+
+            const messageBox =
+                document.createElement("div");
+
+            messageBox.className =
+                "result-message";
+
+
+            messageBox.textContent =
+                message;
+
+
+            result.appendChild(
+                messageBox
+            );
+
+        }
+
+
+        function verifyMembership() {
+
+            const input =
+                document.getElementById(
+                    "membership-reference"
+                );
+
+
+            const reference =
+                input.value.trim();
+
+
+            if (!reference) {
+
+                showMessage(
+                    "Please enter an ECR membership reference number."
+                );
+
+                return;
+
+            }
+
+
+            const match =
+                membershipRecords.find(
+                    record =>
+                        getReference(record)
+                            .toLowerCase() ===
+                        reference.toLowerCase()
+                );
+
+
+            if (!match) {
+
+                showMessage(
+                    "No membership record found for this reference."
+                );
+
+                return;
+
+            }
+
+
+            displayMembership(match);
+
+        }
+
+
+        /* =========================================================
+           CERTIFICATE VALIDATION
+           NEW FUNCTIONALITY
+        ========================================================= */
+
+        /*
+         * Certificate JSON database.
+         *
+         * If your actual file has another name, change ONLY
+         * the filename below.
+         */
+
+        const CERTIFICATE_DATA_URL =
+            "assets/certificates.joson";
+
+
+        let certificateRecords = [];
+
+
+        /*
+         * Load certificate database.
+         */
+
+        async function loadCertificateData() {
+
+            const response =
+                await fetch(
+                    CERTIFICATE_DATA_URL,
+                    {
+                        cache: "no-store"
+                    }
+                );
+
+
+            if (!response.ok) {
+
+                throw new Error(
+                    `Unable to load certificate database (${response.status}).`
+                );
+
+            }
+
+
+            const text =
+                await response.text();
+
+
+            const data =
+                JSON.parse(text);
+
+
+            /*
+             * Support an array directly:
+             *
+             * [
+             *   {...},
+             *   {...}
+             * ]
+             */
+
+            if (Array.isArray(data)) {
+
+                return data;
+
+            }
+
+
+            /*
+             * Also support:
+             *
+             * {
+             *   "certificates": [...]
+             * }
+             */
+
+            if (
+                Array.isArray(
+                    data.certificates
+                )
+            ) {
+
+                return data.certificates;
+
+            }
+
+
+            /*
+             * Also support:
+             *
+             * {
+             *   "credentials": [...]
+             * }
+             */
+
+            if (
+                Array.isArray(
+                    data.credentials
+                )
+            ) {
+
+                return data.credentials;
+
+            }
+
+
+            /*
+             * Also support:
+             *
+             * {
+             *   "records": [...]
+             * }
+             */
+
+            if (
+                Array.isArray(
+                    data.records
+                )
+            ) {
+
+                return data.records;
+
+            }
+
+
+            return [];
+
+        }
+
+
+        /*
+         * Obtain certificate ID/reference.
+         *
+         * The function supports common field names
+         * so the JSON structure does not need to be changed.
+         */
+
+        function getCertificateReference(record) {
+
+            return String(
+
+                record.certificate_id ||
+                record.certificateId ||
+                record.certificateID ||
+                record.certificate_reference ||
+                record.certificateReference ||
+                record.reference ||
+                record.referenceNo ||
+                record.reference_no ||
+                record.refNo ||
+                record.id ||
+                ""
+
+            ).trim();
+
+        }
+
+
+        /*
+         * Get certificate information.
+         */
+
+        function getCertificateValue(
+            record,
+            keys
+        ) {
+
+            for (const key of keys) {
+
+                if (
+                    record[key] !== undefined &&
+                    record[key] !== null &&
+                    String(record[key]).trim() !== ""
+                ) {
+
+                    return record[key];
+
+                }
+
+            }
+
+
+            return "—";
+
+        }
+
+
+        /*
+         * Certificate status.
+         */
+
+        function certificateStatusClass(
+            status
+        ) {
+
+            const s =
+                String(status).toLowerCase();
+
+
+            if (
+                s.includes("active") ||
+                s.includes("verified") ||
+                s.includes("valid") ||
+                s.includes("issued")
+            ) {
+
+                return "status-valid";
+
+            }
+
+
+            if (
+                s.includes("expired")
+            ) {
+
+                return "status-expired";
+
+            }
+
+
+            if (
+                s.includes("revoked") ||
+                s.includes("invalid") ||
+                s.includes("cancelled") ||
+                s.includes("canceled")
+            ) {
+
+                return "status-invalid";
+
+            }
+
+
+            return "status-neutral";
+
+        }
+
+
+        /*
+         * Display verified certificate.
+         */
+
+        function displayCertificate(
+            record
+        ) {
+
+            const result =
+                document.getElementById(
+                    "certificate-result"
+                );
+
+
+            result.innerHTML = "";
+
+
+            const reference =
+                getCertificateReference(
+                    record
+                );
+
+
+            const holder =
+                getCertificateValue(
+                    record,
+                    [
+                        "certificate_holder",
+                        "certificateHolder",
+                        "holderName",
+                        "holder_name",
+                        "name",
+                        "fullName",
+                        "recipientName",
+                        "recipient_name"
+                    ]
+                );
+
+
+            const certificateTitle =
+                getCertificateValue(
+                    record,
+                    [
+                        "certificate_title",
+                        "certificateTitle",
+                        "title",
+                        "certificateType",
+                        "certificate_type",
+                        "type"
+                    ]
+                );
+
+
+            const event =
+                getCertificateValue(
+                    record,
+                    [
+                        "event",
+                        "eventName",
+                        "event_name",
+                        "programme",
+                        "program",
+                        "activity"
+                    ]
+                );
+
+
+            const issueDate =
+                getCertificateValue(
+                    record,
+                    [
+                        "issueDate",
+                        "issue_date",
+                        "dateOfIssue",
+                        "date_issued"
+                    ]
+                );
+
+
+            const status =
+                getCertificateValue(
+                    record,
+                    [
+                        "status",
+                        "certificateStatus",
+                        "certificate_status"
+                    ]
+                );
+
+
+            const validUntil =
+                getCertificateValue(
+                    record,
+                    [
+                        "validUntil",
+                        "valid_until",
+                        "expiryDate",
+                        "expiry_date",
+                        "validity",
+                        "valid_to"
+                    ]
+                );
+
+
+            const recordBox =
+                document.createElement("div");
+
+            recordBox.className =
+                "membership-record";
+
+
+            const header =
+                document.createElement("div");
+
+            header.className =
+                "record-header";
+
+
+            const title =
+                document.createElement("h3");
+
+            title.textContent =
+                "Certificate Verification Record";
+
+
+            const referenceText =
+                document.createElement("span");
+
+            referenceText.textContent =
+                reference;
+
+
+            header.appendChild(title);
+
+            header.appendChild(
+                referenceText
+            );
+
+
+            const grid =
+                document.createElement("div");
+
+            grid.className =
+                "record-grid";
+
+
+            grid.appendChild(
+                createRecordItem(
+                    "Certificate Reference",
+                    reference
+                )
+            );
+
+
+            grid.appendChild(
+                createRecordItem(
+                    "Certificate Holder",
+                    holder
+                )
+            );
+
+
+            grid.appendChild(
+                createRecordItem(
+                    "Certificate",
+                    certificateTitle
+                )
+            );
+
+
+            grid.appendChild(
+                createRecordItem(
+                    "Event / Programme",
+                    event
+                )
+            );
+
+
+            grid.appendChild(
+                createRecordItem(
+                    "Status",
+                    status,
+                    `status ${certificateStatusClass(status)}`
+                )
+            );
+
+
+            grid.appendChild(
+                createRecordItem(
+                    "Date of Issue",
+                    issueDate
+                )
+            );
+
+
+            grid.appendChild(
+                createRecordItem(
+                    "Valid Until",
+                    validUntil
+                )
+            );
+
+
+            recordBox.appendChild(
+                header
+            );
+
+
+            recordBox.appendChild(
+                grid
+            );
+
+
+            result.appendChild(
+                recordBox
+            );
+
+        }
+
+
+        /*
+         * Certificate validation message.
+         */
+
+        function showCertificateMessage(
+            message
+        ) {
+
+            const result =
+                document.getElementById(
+                    "certificate-result"
+                );
+
+
+            result.innerHTML = "";
+
+
+            const messageBox =
+                document.createElement("div");
+
+
+            messageBox.className =
+                "result-message";
+
+
+            messageBox.textContent =
+                message;
+
+
+            result.appendChild(
+                messageBox
+            );
+
+        }
+
+
+        /*
+         * Verify certificate reference.
+         */
+
+        function verifyCertificate() {
+
+            const input =
+                document.getElementById(
+                    "certificate-reference"
+                );
+
+
+            const reference =
+                input.value.trim();
+
+
+            if (!reference) {
+
+                showCertificateMessage(
+                    "Please enter a certificate reference number."
+                );
+
+                return;
+
+            }
+
+
+            /*
+             * Case-insensitive exact match.
+             */
+
+            const match =
+                certificateRecords.find(
+                    record =>
+                        getCertificateReference(
+                            record
+                        ).toLowerCase() ===
+                        reference.toLowerCase()
+                );
+
+
+            if (!match) {
+
+                showCertificateMessage(
+                    "No certificate record found for this reference."
+                );
+
+                return;
+
+            }
+
+
+            displayCertificate(
+                match
+            );
+
+        }
+
+
+        /* =========================================================
+           INITIALISE BOTH VALIDATION SYSTEMS
+        ========================================================= */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            async function () {
+
+
+                /* -----------------------------------------
+                   ECR MEMBERSHIP VALIDATION
+                ----------------------------------------- */
+
+                const membershipButton =
+                    document.getElementById(
+                        "verify-membership"
+                    );
+
+
+                const membershipInput =
+                    document.getElementById(
+                        "membership-reference"
+                    );
+
+
+                if (
+                    membershipButton &&
+                    membershipInput
+                ) {
+
+
+                    membershipButton.addEventListener(
+                        "click",
+                        verifyMembership
+                    );
+
+
+                    membershipInput.addEventListener(
+                        "keydown",
+                        function (event) {
+
+                            if (
+                                event.key === "Enter"
+                            ) {
+
+                                verifyMembership();
+
+                            }
+
+                        }
+                    );
+
+
+                    try {
+
+                        membershipRecords =
+                            await loadMembershipData();
+
+
+                    } catch (error) {
+
+                        console.error(
+                            error
+                        );
+
+
+                        showMessage(
+                            "The ECR membership validation service is currently unavailable."
+                        );
+
+                    }
+
+                }
+
+
+                /* -----------------------------------------
+                   CERTIFICATE VALIDATION
+                ----------------------------------------- */
+
+                const certificateButton =
+                    document.getElementById(
+                        "verify-certificate"
+                    );
+
+
+                const certificateInput =
+                    document.getElementById(
+                        "certificate-reference"
+                    );
+
+
+                if (
+                    certificateButton &&
+                    certificateInput
+                ) {
+
+
+                    certificateButton.addEventListener(
+                        "click",
+                        verifyCertificate
+                    );
+
+
+                    certificateInput.addEventListener(
+                        "keydown",
+                        function (event) {
+
+                            if (
+                                event.key === "Enter"
+                            ) {
+
+                                verifyCertificate();
+
+                            }
+
+                        }
+                    );
+
+
+                    try {
+
+                        certificateRecords =
+                            await loadCertificateData();
+
+
+                    } catch (error) {
+
+                        console.error(
+                            error
+                        );
+
+
+                        showCertificateMessage(
+                            "The certificate validation service is currently unavailable."
+                        );
+
+                    }
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>
