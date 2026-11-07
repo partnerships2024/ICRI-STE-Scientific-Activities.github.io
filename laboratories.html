@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore the interdisciplinary research laboratories of ICRI-STE: computational healthcare intelligence, intelligent energy systems, and environmental intelligence and autonomous systems.">
+  <meta name="theme-color" content="#10243a">
+  <title>Research Laboratories | ICRI-STE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:#10243a; --navy-2:#173b56; --teal:#177b88; --gold:#e4b45d;
+      --ink:#1c3042; --muted:#637384; --line:#e1e8ee; --paper:#f4f7fa; --white:#fff;
+      --shadow:0 18px 45px rgba(16,36,58,.09);
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:"DM Sans",Segoe UI,Arial,sans-serif; color:var(--ink); background:var(--paper); line-height:1.7; }
+    a { color:inherit; text-decoration:none; }
+    .site-header { position:sticky; top:0; z-index:20; background:rgba(255,255,255,.94); backdrop-filter:blur(14px); border-bottom:1px solid var(--line); }
+    .header-inner { max-width:1240px; margin:auto; padding:13px 24px; display:flex; align-items:center; justify-content:space-between; gap:22px; }
+    .brand { display:flex; align-items:center; gap:12px; color:var(--navy); min-width:0; }
+    .brand img { width:46px; height:46px; object-fit:contain; }
+    .brand strong { display:block; font:800 16px "Manrope",sans-serif; letter-spacing:.02em; }
+    .brand small { display:block; color:var(--muted); font-size:10px; line-height:1.4; }
+    .top-nav { display:flex; align-items:center; gap:5px; }
+    .top-nav a { padding:9px 12px; border-radius:9px; color:var(--navy); font-size:12px; font-weight:700; transition:background .2s,color .2s; }
+    .top-nav a:hover,.top-nav a[aria-current="page"] { background:#edf4f7; color:var(--teal); }
+    .menu-toggle { display:none; border:0; border-radius:9px; padding:10px 13px; background:var(--navy); color:#fff; font-weight:700; cursor:pointer; }
+    .hero { position:relative; overflow:hidden; color:#fff; background:linear-gradient(118deg,#0e2237 0%,#17465f 62%,#176c78 100%); }
+    .hero:before,.hero:after { content:""; position:absolute; border:1px solid rgba(255,255,255,.1); border-radius:50%; pointer-events:none; }
+    .hero:before { width:560px;height:560px;right:-100px;top:-280px; }
+    .hero:after { width:390px;height:390px;right:15px;top:-190px; }
+    .hero-inner { max-width:1240px; margin:auto; padding:82px 24px 76px; position:relative; z-index:1; }
+    .eyebrow,.section-kicker { display:inline-flex; align-items:center; gap:10px; font-size:11px; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    .eyebrow { color:#f1cd83; }
+    .eyebrow:before { content:""; width:28px;height:2px;background:var(--gold); }
+    h1,h2,h3 { font-family:"Manrope",sans-serif; }
+    h1 { max-width:850px; margin:17px 0 18px; font-size:clamp(38px,5.2vw,66px); line-height:1.08; letter-spacing:-.04em; }
+    .hero-lead { max-width:790px; margin:0; color:#d9e6ee; font-size:clamp(15px,1.7vw,18px); }
+    .hero-actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:30px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; gap:9px; padding:12px 17px; border-radius:10px; font-size:13px; font-weight:800; transition:transform .2s,box-shadow .2s,background .2s; }
+    .button:hover { transform:translateY(-2px); }
+    .button.primary { background:var(--gold); color:#192e40; box-shadow:0 8px 22px rgba(228,180,93,.2); }
+    .button.secondary { border:1px solid rgba(255,255,255,.35); color:#fff; background:rgba(255,255,255,.04); }
+    .wrap { max-width:1240px; margin:auto; padding:66px 24px; }
+    .section-heading { display:flex; justify-content:space-between; align-items:end; gap:30px; margin-bottom:27px; }
+    .section-kicker { color:var(--teal); }
+    .section-heading h2 { margin:10px 0 8px; color:var(--navy); font-size:clamp(27px,3vw,38px); line-height:1.2; letter-spacing:-.03em; }
+    .section-heading p { max-width:650px; margin:0; color:var(--muted); font-size:14px; }
+    .lab-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; }
+    .lab-card { display:flex; flex-direction:column; min-width:0; overflow:hidden; background:var(--white); border:1px solid var(--line); border-radius:19px; box-shadow:0 7px 24px rgba(16,36,58,.045); transition:transform .25s,box-shadow .25s,border-color .25s; }
+    .lab-card:hover { transform:translateY(-6px); box-shadow:var(--shadow); border-color:#c7d9e2; }
+    .lab-image-wrap { position:relative; aspect-ratio:16/9; overflow:hidden; background:linear-gradient(135deg,#e5edf2,#d8e7ea); }
+    .lab-image { width:100%; height:100%; object-fit:cover; display:block; transition:transform .5s; }
+    .lab-card:hover .lab-image { transform:scale(1.04); }
+    .lab-image-wrap:after { content:""; position:absolute; inset:0; background:linear-gradient(0deg,rgba(10,28,44,.2),transparent 55%); pointer-events:none; }
+    .lab-body { display:flex; flex-direction:column; align-items:flex-start; flex:1; padding:23px 23px 24px; }
+    .lab-tag { display:inline-flex; padding:5px 9px; margin-bottom:12px; border-radius:999px; background:#edf5f6; color:#176b78; font-size:10px; font-weight:800; letter-spacing:.09em; text-transform:uppercase; }
+    .lab-body h3 { margin:0 0 12px; color:var(--navy); font-size:20px; line-height:1.35; letter-spacing:-.025em; }
+    .lab-body p { margin:0 0 22px; color:var(--muted); font-size:13px; line-height:1.8; }
+    .lab-link { margin-top:auto; display:inline-flex; align-items:center; gap:9px; padding:10px 13px; border-radius:9px; background:var(--navy); color:#fff; font-size:12px; font-weight:800; transition:background .2s,gap .2s; }
+    .lab-link:hover { background:var(--teal); gap:13px; }
+    .framework-note { margin-top:28px; padding:17px 20px; border:1px solid #f0dfbd; border-left:4px solid var(--gold); border-radius:12px; background:#fffaf0; color:#65717c; font-size:12px; }
+    .framework-note strong { color:var(--navy); }
+    .footer { background:#0c1e30; color:#dbe5eb; }
+    .footer-inner { max-width:1240px; margin:auto; padding:30px 24px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .footer b { font:800 15px "Manrope",sans-serif; }
+    .footer p { margin:5px 0 0; color:#b7c6d0; font-size:11px; }
+    .footer a { color:#f1d99a; font-size:12px; font-weight:700; }
+    @media(max-width:950px) { .lab-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .section-heading { display:block; } }
+    @media(max-width:680px) {
+      .header-inner { padding:12px 16px; flex-wrap:wrap; }
+      .menu-toggle { display:block; }
+      .top-nav { display:none; width:100%; align-items:stretch; flex-direction:column; padding-top:5px; }
+      .top-nav.open { display:flex; }
+      .top-nav a { padding:11px 12px; }
+      .hero-inner { padding:60px 18px 58px; }
+      .wrap { padding:45px 18px; }
+      .lab-grid { grid-template-columns:1fr; gap:17px; }
+      .lab-body { padding:20px; }
+      .footer-inner { display:block; padding:26px 18px; }
+      .footer-inner > a { display:inline-block; margin-top:15px; }
+    }
+    @media(prefers-reduced-motion:reduce) { html{scroll-behavior:auto} *,*:before,*:after{transition:none!important} }
+  </style>
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="ICRI-STE home">
+        <img src="assets/ICRI-STE-Logo.svg" alt="ICRI-STE logo">
+        <span><strong>ICRI-STE</strong><small>Research · Innovation · Institutional Framework</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="topNav">☰ Explore</button>
+      <nav class="top-nav" id="topNav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="statutes-governance.html">Statutes, Constitution &amp; Governance</a>
+        <a href="laboratories.html" aria-current="page">Laboratories</a>
+        <a href="technology-entities.html">Technology Entities</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <span class="eyebrow">Interdisciplinary research · Three specialist laboratories</span>
+        <h1>Research that connects disciplines and shapes what comes next.</h1>
+        <p class="hero-lead">Explore ICRI-STE’s research laboratories advancing computational healthcare, intelligent energy systems, and environmental intelligence. Each brings specialist expertise together to address complex scientific and societal challenges.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#laboratories">Explore our laboratories <span aria-hidden="true">↓</span></a>
+          <a class="button secondary" href="index.html">Return to ICRI-STE <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap" id="laboratories">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">Our research ecosystem</span>
+          <h2>Specialist laboratories. Shared ambition.</h2>
+          <p>Discover the research themes, capabilities, and dedicated websites of ICRI-STE’s laboratory community.</p>
+        </div>
+      </div>
+
+      <div class="lab-grid">
+        <article class="lab-card">
+          <div class="lab-image-wrap">
+            <img class="lab-image" src="assets/Computational_Healthcare_Intelligence_(CHI)_Lab.jpeg" alt="Computational Healthcare Intelligence Lab" loading="lazy">
+          </div>
+          <div class="lab-body">
+            <span class="lab-tag">Healthcare · Biomedical AI</span>
+            <h3>Computational Healthcare Intelligence (CHI) Lab</h3>
+            <p>Advancing computational healthcare, biomedical artificial intelligence, computational oncology, systems biology, medical data science, and trustworthy intelligent healthcare. Research spans biomedical modelling, medical imaging, transcriptomics, federated learning, and agentic research platforms.</p>
+            <a class="lab-link" href="https://icriste.com/computational-healthcare-intelligence-lab-chi-lab/" target="_blank" rel="noopener noreferrer">Explore CHI Lab <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="lab-card">
+          <div class="lab-image-wrap">
+            <img class="lab-image" src="assets/Intelligent_Energy_Systems_&_Sustainable_Technologies_(IESST)_Lab.jpeg" alt="Intelligent Energy Systems and Sustainable Technologies Lab" loading="lazy">
+          </div>
+          <div class="lab-body">
+            <span class="lab-tag">Energy · Sustainability</span>
+            <h3>Intelligent Energy Systems &amp; Sustainable Technologies (IESST) Lab</h3>
+            <p>Exploring intelligent energy systems, renewable-energy forecasting and optimisation, smart grids, sustainable engineering, and computational energy modelling to support efficient, resilient, and future-ready energy technologies.</p>
+            <a class="lab-link" href="https://partnerships2024.github.io/IESST-Lab.github.io/" target="_blank" rel="noopener noreferrer">Explore IESST Lab <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="lab-card">
+          <div class="lab-image-wrap">
+            <img class="lab-image" src="assets/Environmental_Intelligence_&_Autonomous_Systems_(EIAS)_Lab.jpeg" alt="Environmental Intelligence and Autonomous Systems Lab" loading="lazy">
+          </div>
+          <div class="lab-body">
+            <span class="lab-tag">Environment · Autonomous systems</span>
+            <h3>Environmental Intelligence &amp; Autonomous Systems (EIAS) Lab</h3>
+            <p>Developing environmental artificial intelligence, autonomous monitoring, geospatial intelligence, climate and ecological analytics, environmental modelling, and data-informed approaches to sustainable environmental management.</p>
+            <a class="lab-link" href="https://partnerships2024.github.io/EIAS-Lab.github.io/" target="_blank" rel="noopener noreferrer">Explore EIAS Lab <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
+
+      <aside class="framework-note">
+        <strong>Institutional framework:</strong> ICRI-STE’s laboratories operate within the Council’s institutional framework, subject to approved leadership, resources, and governance.
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <b>ICRI-STE</b>
+        <p>International Council for Research &amp; Innovation in Science, Technology &amp; Engineering</p>
+      </div>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('menuToggle');
+    const navigation = document.getElementById('topNav');
+    menuButton.addEventListener('click', () => {
+      const isOpen = navigation.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+    });
+  </script>
+</body>
+</html>
